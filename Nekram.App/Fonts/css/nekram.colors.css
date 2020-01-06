@@ -1,0 +1,338 @@
+   /*
+ * Color pallete: Nekram.CSS 1.0 Augs 2018
+ * Created by Nkambwe Mark
+ * macjohnan@yahoo.com
+ * Copyright 2018-2019 Mark-Nk
+ */
+   /*create color pallette - all global variables*/
+   
+    :root {
+       /*reds*/
+       --red-light-extra: rgb(255, 235, 238);
+       --red-light: rgb(255, 205, 210);
+       --red-light-slightly: rgb(239, 154, 154);
+       --red-light-medium: rgb(229, 115, 115);
+       --red-light-strong: rgb(239, 83, 80);
+       --red: rgb(244, 67, 54);
+       --red-dark-slightly: rgb(229, 57, 53);
+       --red-dark: rgb(211, 47, 47);
+       --red-dark-strong: rgb(189, 40, 40);
+       --red-dark-extra: rgb(183, 28, 28);
+       --red-light-accent: rgb(255, 138, 128);
+       --red-medium-accent: rgb(255, 82, 82);
+       --red-tarn-accent: rgb(255, 23, 68);
+       --red-dark-accent: rgb(213, 0, 0);
+       /**
+       **/
+       /*pinks*/
+       --pink-light-extra: rgb(252, 228, 236);
+       --pink-light: rgb(248, 187, 208);
+       --pink-light-slightly: rgb(244, 143, 177);
+       --pink-light-medium: rgb(240, 98, 146);
+       --pink-light-strong: rgb(236, 64, 122);
+       --pink: rgb(233, 30, 99);
+       --pink-dark-slightly: rgb(216, 27, 96);
+       --pink-dark: rgb(194, 24, 91);
+       --pink-dark-strong: rgb(173, 20, 87);
+       --pink-dark-extra: rgb(136, 14, 79);
+       --pink-light-accent: rgb(255, 128, 171);
+       --pink-medium-accent: rgb(255, 64, 129);
+       --pink-tarn-accent: rgb(245, 0, 87);
+       --pink-dark-accent: rgb(197, 17, 98);
+       /**
+        **/
+       /*purples*/
+       --purple-light-extra: rgb(243, 229, 245);
+       --purple-light: rgb(225, 190, 231);
+       --purple-light-slightly: rgb(206, 147, 216);
+       --purple-light-medium: rgb(186, 104, 200);
+       --purple-light-strong: rgb(171, 71, 188);
+       --purple: rgb(156, 39, 176);
+       --purple-dark-slightly: rgb(142, 36, 170);
+       --purple-dark: rgb(123, 31, 162);
+       --purple-dark-strong: rgb(106, 27, 154);
+       --purple-dark-extra: rgb(74, 20, 140);
+       --purple-light-accent: rgb(234, 128, 252);
+       --purple-medium-accent: rgb(224, 64, 251);
+       --purple-tarn-accent: rgb(213, 0, 249);
+       --purple-dark-accent: rgb(170, 0, 255);
+       /**
+        **/
+       /*deep purples*/
+       --purple-deep-light-extra: rgb(237, 231, 246);
+       --purple-deep-light: rgb(209, 196, 233);
+       --purple-deep-light-slightly: rgb(179, 157, 219);
+       --purple-deep-light-medium: rgb(149, 117, 205);
+       --purple-deep-light-strong: rgb(126, 87, 194);
+       --purple-deep: rgb(103, 58, 183);
+       --purple-deep-dark-slightly: rgb(94, 53, 177);
+       --purple-deep-dark: rgb(81, 45, 168);
+       --purple-deep-dark-strong: rgb(69, 39, 160);
+       --purple-deep-dark-extra: rgb(49, 27, 146);
+       --purple-deep-light-accent: rgb(179, 136, 255);
+       --purple-deep-medium-accent: rgb(124, 77, 255);
+       --purple-deep-tarn-accent: rgb(101, 31, 255);
+       --purple-deep-dark-accent: rgb(98, 0, 234);
+       /**
+        **/
+       /*indigos*/
+       --indigo-light-extra: rgb(232, 234, 246);
+       --indigo-light: rgb(197, 202, 233);
+       --indigo-light-slightly: rgb(159, 168, 218);
+       --indigo-light-medium: rgb(121, 134, 203);
+       --indigo-light-strong: rgb(92, 107, 192);
+       --indigo: rgb(63, 81, 181);
+       --indigo-dark-slightly: rgb(57, 73, 171);
+       --indigo-dark: rgb(48, 63, 159);
+       --indigo-dark-strong: rgb(37, 45, 146);
+       --indigo-dark-extra: rgb(26, 35, 126);
+       --indigo-light-accent: rgb(140, 158, 255);
+       --indigo-medium-accent: rgb(83, 109, 254);
+       --indigo-tarn-accent: rgb(61, 90, 254);
+       --indigo-dark-accent: rgb(48, 79, 254);
+       /**
+        **/
+       /*blues*/
+       --blue-light-extra: rgb(227, 242, 253);
+       --blue-light: rgb(187, 222, 251);
+       --blue-light-slightly: rgb(144, 202, 249);
+       --blue-light-medium: rgb(100, 181, 246);
+       --blue-light-strong: rgb(66, 165, 245);
+       --blue: rgb(33, 150, 243);
+       --blue-dark-slightly: rgb(30, 136, 229);
+       --blue-dark: rgb(25, 118, 210);
+       --blue-dark-strong: rgb(21, 101, 192);
+       --blue-dark-extra: rgb(13, 71, 161);
+       --blue-light-accent: rgb(130, 177, 255);
+       --blue-medium-accent: rgb(68, 138, 255);
+       --blue-tarn-accent: rgb(41, 121, 255);
+       --blue-dark-accent: rgb(41, 98, 255);
+       /**
+        **/
+       /*light blues*/
+       --blue-light-light-extra: rgb(227, 245, 254);
+       --blue-ligh-light: rgb(179, 229, 252);
+       --blue-light-light-slightly: rgb(129, 212, 250);
+       --blue-light-light-medium: rgb(79, 195, 247);
+       --blue-light-light-strong: rgb(41, 182, 246);
+       --blue-light-control: rgb(3, 169, 244);
+       --blue-dark-light-slightly: rgb(3, 155, 229);
+       --blue-dark-light-light: rgb(2, 136, 209);
+       --blue-dark-light-strong: rgb(2, 119, 189);
+       --blue-dark-light-extra: rgb(1, 87, 155);
+       --blue-light-light-accent: rgb(128, 216, 255);
+       --blue-medium-light-accent: rgb(64, 196, 255);
+       --blue-tarn-light-accent: rgb(0, 176, 255);
+       --blue-dark-light-accent: rgb(0, 145, 234);
+       /**
+        **/
+       /*cyans*/
+       --cyan-light-extra: rgb(224, 247, 250);
+       --cyan-light: rgb(178, 237, 242);
+       --cyan-light-slightly: rgb(128, 222, 234);
+       --cyan-light-medium: rgb(77, 208, 225);
+       --cyan-light-strong: rgb(38, 198, 218);
+       --cyan: rgb(0, 188, 212);
+       --cyan-dark-slightly: rgb(0, 172, 193);
+       --cyan-dark: rgb(0, 151, 167);
+       --cyan-dark-strong: rgb(0, 131, 143);
+       --cyan-dark-extra: rgb(0, 94, 102);
+       --cyan-light-accent: rgb(132, 255, 255);
+       --cyan-medium-accent: rgb(24, 225, 255);
+       --cyan-tarn-accent: rgb(0, 229, 255);
+       --cyan-dark-accent: rgb(0, 184, 212);
+       /**
+        **/
+       /*teals*/
+       --teal-light-extra: rgb(224, 242, 241);
+       --teal-light: rgb(178, 223, 219);
+       --teal-light-slightly: rgb(128, 203, 194);
+       --teal-light-medium: rgb(77, 182, 172);
+       --teal-light-strong: rgb(38, 166, 154);
+       --teal: rgb(0, 153, 135);
+       --teal-dark-slightly: rgb(0, 137, 123);
+       --teal-dark: rgb(0, 121, 107);
+       --teal-dark-strong: rgb(0, 105, 92);
+       --teal-dark-extra: rgb(0, 77, 64);
+       --teal-light-accent: rgb(167, 255, 235);
+       --teal-medium-accent: rgb(100, 225, 218);
+       --teal-tarn-accent: rgb(29, 233, 182);
+       --teal-dark-accent: rgb(0, 191, 165);
+       /**
+        **/
+       /*greens*/
+       --green-light-extra: rgb(232, 245, 233);
+       --green-light: rgb(200, 230, 201);
+       --green-light-slightly: rgb(165, 214, 167);
+       --green-light-medium: rgb(129, 199, 132);
+       --green-light-strong: rgb(102, 187, 106);
+       --green: rgb(76, 175, 80);
+       --green-dark-slightly: rgb(67, 160, 71);
+       --green-dark: rgb(56, 140, 60);
+       --green-dark-strong: rgb(46, 125, 50);
+       --green-dark-extra: rgb(27, 94, 32);
+       --green-light-accent: rgb(185, 246, 202);
+       --green-medium-accent: rgb(105, 240, 174);
+       --green-tarn-accent: rgb(0, 230, 118);
+       --green-dark-accent: rgb(0, 200, 83);
+       /**
+       **/
+       /*light green*/
+       --green-light-light-extra: rgb(241, 248, 233);
+       --green-ligh-light: rgb(220, 237, 200);
+       --green-light-light-slightly: rgb(194, 223, 162);
+       --green-light-light-medium: rgb(174, 213, 129);
+       --green-light-light-strong: rgb(156, 204, 101);
+       --green-light-control: rgb(139, 195, 74);
+       --green-dark-light-slightly: rgb(124, 179, 66);
+       --green-dark-light-light: rgb(104, 159, 56);
+       --green-dark-light-strong: rgb(85, 139, 47);
+       --green-dark-light-extra: rgb(51, 105, 30);
+       --green-light-light-accent: rgb(204, 255, 144);
+       --green-medium-light-accent: rgb(178, 255, 89);
+       --green-tarn-light-accent: rgb(118, 255, 3);
+       --green-dark-light-accent: rgb(100, 221, 23);
+       /**
+        **/
+       /*limes*/
+       --lime-light-extra: rgb(249, 251, 231);
+       --lime-light: rgb(240, 244, 195);
+       --lime-light-slightly: rgb(230, 238, 156);
+       --lime-light-medium: rgb(220, 231, 117);
+       --lime-light-strong: rgb(212, 225, 87);
+       --lime: rgb(205, 220, 57);
+       --lime-dark-slightly: rgb(192, 202, 51);
+       --lime-dark: rgb(175, 180, 43);
+       --lime-dark-strong: rgb(158, 157, 36);
+       --lime-dark-extra: rgb(126, 122, 22);
+       --lime-light-accent: rgb(244, 255, 129);
+       --lime-medium-accent: rgb(238, 255, 65);
+       --lime-tarn-accent: rgb(198, 255, 0);
+       --lime-dark-accent: rgb(174, 234, 0);
+       /**
+        **/
+       /*yellows*/
+       --yellow-light-extra: rgb(255, 253, 231);
+       --yellow-light: rgb(253, 246, 193);
+       --yellow-light-slightly: rgb(255, 245, 157);
+       --yellow-light-medium: rgb(255, 241, 118);
+       --yellow-light-strong: rgb(255, 238, 88);
+       --yellow: rgb(255, 232, 59);
+       --yellow-dark-slightly: rgb(253, 216, 53);
+       --yellow-dark: rgb(251, 192, 45);
+       --yellow-dark-strong: rgb(249, 168, 37);
+       --yellow-dark-extra: rgb(245, 127, 23);
+       --yellow-light-accent: rgb(255, 255, 141);
+       --yellow-medium-accent: rgb(255, 255, 0);
+       --yellow-tarn-accent: rgb(255, 234, 0);
+       --yellow-dark-accent: rgb(255, 214, 0);
+
+       --yellow-light-extra: rgb(252, 250, 233);
+       /**
+        **/
+       /*ambers*/
+       --amber-light-extra: rgb(255, 248, 225);
+       --amber-light: rgb(255, 254, 195);
+       --amber-light-slightly: rgb(255, 224, 130);
+       --amber-light-medium: rgb(255, 213, 79);
+       --amber-light-strong: rgb(255, 202, 40);
+       --amber: rgb(255, 193, 7);
+       --amber-dark-slightly: rgb(255, 179, 0);
+       --amber-dark: rgb(255, 160, 0);
+       --amber-dark-strong: rgb(255, 143, 0);
+       --amber-dark-extra: rgb(255, 111, 0);
+       --amber-light-accent: rgb(255, 229, 127);
+       --amber-medium-accent: rgb(255, 215, 64);
+       --amber-tarn-accent: rgb(255, 196, 0);
+       --amber-dark-accent: rgb(255, 171, 0);
+       
+       /**
+       **/
+       /*oranges*/
+       --orange-light-extra: rgb(255, 242, 224);
+       --orange-light: rgb(255, 223, 179);
+       --orange-light-slightly: rgb(253, 200, 127);
+       --orange-light-medium: rgb(255, 183, 77);
+       --orange-light-strong: rgb(255, 167, 38);
+       --orange: rgb(255, 152, 0);
+       --orange-dark-slightly: rgb(251, 140, 0);
+       --orange-dark: rgb(247, 124, 1);
+       --orange-dark-strong: rgb(239, 108, 0);
+       --orange-dark-extra: rgb(230, 81, 0);
+       --orange-light-accent: rgb(255, 209, 128);
+       --orange-medium-accent: rgb(255, 171, 64);
+       --orange-tarn-accent: rgb(255, 145, 0);
+       --orange-dark-accent: rgb(255, 109, 0);
+       /**
+        **/
+       /*deep oranges*/
+       --orange-deep-light-extra: rgb(251, 233, 231);
+       --orange-deep-light: rgb(255, 204, 188);
+       --orange-deep-light-slightly: rgb(255, 171, 145);
+       --orange-deep-light-medium: rgb(255, 138, 101);
+       --orange-deep-light-strong: rgb(255, 112, 67);
+       --orange-deep: rgb(255, 87, 34);
+       --orange-deep-dark-slightly: rgb(245, 80, 30);
+       --orange-deep-dark: rgb(230, 73, 25);
+       --orange-deep-dark-strong: rgb(218, 67, 21);
+       --orange-deep-dark-extra: rgb(191, 54, 12);
+       --orange-deep-light-accent: rgb(255, 159, 130);
+       --orange-deep-medium-accent: rgb(255, 112, 67);
+       --orange-deep-tarn-accent: rgb(255, 98, 52);
+       --orange-deep-dark-accent: rgb(255, 87, 0);
+       /**
+        **/
+       /**
+       **/
+       /*browns*/
+       --brown-light-extra: rgb(241, 236, 234);
+       --brown-light: rgb(214, 204, 200);
+       --brown-light-slightly: rgb(188, 170, 164);
+       --brown-light-medium: rgb(163, 138, 129);
+       --brown-light-strong: rgb(141, 110, 99);
+       --brown: rgb(114, 81, 69);
+       --brown-dark-slightly: rgb(109, 76, 65);
+       --brown-dark: rgb(94, 65, 56);
+       --brown-dark-strong: rgb(78, 52, 46);
+       --brown-dark-extra: rgb(62, 39, 35);
+       --brown-light-accent: rgb(212, 173, 158);
+       --brown-medium-accent: rgb(180, 140, 128);
+       --brown-tarn-accent: rgb(124, 96, 87);
+       --brown-dark-accent: rgb(83, 63, 62);
+       /**
+        **/
+       /*greys*/
+       --white: rgb(255, 255, 255);
+       --grey-light-extra: rgb(248, 245, 245);
+       --grey-light: rgb(236, 236, 236);
+       --grey-light-slightly: rgb(231, 230, 230);
+       --grey-light-medium: rgb(221, 220, 220);
+       --grey-light-strong: rgb(185, 185, 185);
+       --grey: rgb(160, 158, 158);
+       --grey-dark-slightly: rgb(133, 131, 131);
+       --grey-dark: rgb(100, 99, 99);
+       --grey-dark-strong: rgb(75, 75, 75);
+       --grey-dark-extra: rgb(36, 36, 36);
+       --grey-light-accent: rgb(124, 124, 124);
+       --grey-medium-accent: rgb(95, 95, 95);
+       --grey-tarn-accent: rgb(21, 21, 22);
+       --grey-dark-accent: rgb(15, 15, 19);
+       /**
+        **/
+       /**************************************end of background color variables*****************************/
+       /*text colors*/
+       --cl-text-normal: rgb(0, 0, 0);
+       --cl-text-dark: rgb(17, 17, 17);
+       --cl-text-dark-1: rgb(49, 49, 49);
+       --cl-text-dark-2: rgb(107, 106, 106);
+       --cl-text-light: rgb(177, 175, 175);
+       --cl-text-light-1: rgb(209, 209, 209);
+       --cl-text-light-2: rgb(255, 255, 255);
+       --cl-text-highlite: rgb(3, 169, 244);
+       --cl-text-danger: rgb(213, 0, 0);
+       --cl-text-warning: rgb(245, 127, 23);
+       --cl-text-success: rgb(0, 200, 83);
+       /**
+       **/
+       /**************************************end text color variables**************************************/
+   }

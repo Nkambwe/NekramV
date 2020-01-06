@@ -112,6 +112,26 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\avator.png" />
+    <Content Include="Content\images\codenl-logo-l.png" />
+    <Content Include="Content\images\codenl-logo.png" />
+    <Content Include="Content\images\codenm-logo-l.png" />
+    <Content Include="Content\images\codenm-logo.png" />
+    <Content Include="Content\images\codens-logo-l.png" />
+    <Content Include="Content\images\codens-logo.png" />
+    <Content Include="Content\images\codenxl-logo-l.png" />
+    <Content Include="Content\images\codenxl-logo.png" />
+    <Content Include="Content\images\company-logo.png" />
+    <Content Include="Content\images\nvl_logo.png" />
+    <Content Include="Content\images\nvl_logo_l.png" />
+    <Content Include="Content\images\nvm_logo.png" />
+    <Content Include="Content\images\nvm_logo_l.png" />
+    <Content Include="Content\images\nvs_logo.png" />
+    <Content Include="Content\images\nvs_logo_l.png" />
+    <Content Include="Content\images\nvxl_logo.png" />
+    <Content Include="Content\images\nvxl_logo_l.png" />
+    <Content Include="Content\images\sign.png" />
+    <Content Include="Content\main.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -153,6 +173,62 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\themes\dark-blue-theme.css" />
+    <Content Include="Content\themes\dark-purple-theme.css" />
+    <Content Include="Content\themes\dark-red-theme.css" />
+    <Content Include="Content\themes\default-theme.css" />
+    <Content Include="Content\themes\light-blue-theme.css" />
+    <Content Include="Content\themes\light-purple-theme.css" />
+    <Content Include="Content\themes\light-red-theme.css" />
+    <Content Include="Fonts\css\all.css" />
+    <Content Include="Fonts\css\all.min.css" />
+    <Content Include="Fonts\css\brands.css" />
+    <Content Include="Fonts\css\brands.min.css" />
+    <Content Include="Fonts\css\fa-brands.css" />
+    <Content Include="Fonts\css\fa-brands.min.css" />
+    <Content Include="Fonts\css\fa-regular.css" />
+    <Content Include="Fonts\css\fa-regular.min.css" />
+    <Content Include="Fonts\css\fa-solid.css" />
+    <Content Include="Fonts\css\fa-solid.min.css" />
+    <Content Include="Fonts\css\fontawesome-all.css" />
+    <Content Include="Fonts\css\fontawesome-all.min.css" />
+    <Content Include="Fonts\css\fontawesome.css" />
+    <Content Include="Fonts\css\fontawesome.min.css" />
+    <Content Include="Fonts\css\nekram.colors.css" />
+    <Content Include="Fonts\css\nekram.css" />
+    <Content Include="Fonts\css\nekram.fonts.css" />
+    <Content Include="Fonts\css\nekram.min.css" />
+    <Content Include="Fonts\css\nekram.themes.css" />
+    <Content Include="Fonts\css\nekram.themes.min.css" />
+    <Content Include="Fonts\css\regular.css" />
+    <Content Include="Fonts\css\regular.min.css" />
+    <Content Include="Fonts\css\reset.css" />
+    <Content Include="Fonts\css\solid.css" />
+    <Content Include="Fonts\css\solid.min.css" />
+    <Content Include="Fonts\css\svg-with-js.css" />
+    <Content Include="Fonts\css\svg-with-js.min.css" />
+    <Content Include="Fonts\css\v4-shims.css" />
+    <Content Include="Fonts\css\v4-shims.min.css" />
+    <Content Include="Fonts\js\all.js" />
+    <Content Include="Fonts\js\all.min.js" />
+    <Content Include="Fonts\js\brands.js" />
+    <Content Include="Fonts\js\brands.min.js" />
+    <Content Include="Fonts\js\conflict-detection.js" />
+    <Content Include="Fonts\js\conflict-detection.min.js" />
+    <Content Include="Fonts\js\fontawesome.js" />
+    <Content Include="Fonts\js\fontawesome.min.js" />
+    <Content Include="Fonts\js\regular.js" />
+    <Content Include="Fonts\js\regular.min.js" />
+    <Content Include="Fonts\js\solid.js" />
+    <Content Include="Fonts\js\solid.min.js" />
+    <Content Include="Fonts\js\v4-shims.js" />
+    <Content Include="Fonts\js\v4-shims.min.js" />
+    <Content Include="Fonts\sprites\brands.svg" />
+    <Content Include="Fonts\sprites\regular.svg" />
+    <Content Include="Fonts\sprites\solid.svg" />
+    <Content Include="Fonts\webfonts\fa-brands-400.svg" />
+    <Content Include="Fonts\webfonts\fa-regular-400.svg" />
+    <Content Include="Fonts\webfonts\fa-solid-900.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -178,6 +254,18 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Fonts\webfonts\fa-brands-400.eot" />
+    <Content Include="Fonts\webfonts\fa-brands-400.ttf" />
+    <Content Include="Fonts\webfonts\fa-brands-400.woff" />
+    <Content Include="Fonts\webfonts\fa-brands-400.woff2" />
+    <Content Include="Fonts\webfonts\fa-regular-400.eot" />
+    <Content Include="Fonts\webfonts\fa-regular-400.ttf" />
+    <Content Include="Fonts\webfonts\fa-regular-400.woff" />
+    <Content Include="Fonts\webfonts\fa-regular-400.woff2" />
+    <Content Include="Fonts\webfonts\fa-solid-900.eot" />
+    <Content Include="Fonts\webfonts\fa-solid-900.ttf" />
+    <Content Include="Fonts\webfonts\fa-solid-900.woff" />
+    <Content Include="Fonts\webfonts\fa-solid-900.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
     <Content Include="Scripts\inputmask\inputmask.js" />
@@ -197,11 +285,13 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\reset.css" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -284,6 +374,7 @@
   <ItemGroup>
     <Compile Include="App_Start\Ninject.Web.Common.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -294,6 +385,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -303,7 +397,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

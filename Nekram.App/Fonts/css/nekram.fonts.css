@@ -1,0 +1,81 @@
+/*Font collection
+*/
+
+
+/*henrich Fichna Font Licence*/
+
+@font-face {
+    font-family: 'Capsuula';
+    src: url('../fonts/Capsuula.ttf');
+}
+
+
+/*Copyright (c) 2011, Vernon Adams (vern@newtypography.co.uk), with Reserved Font Name Nunito.*/
+
+@font-face {
+    font-family: 'Nunito-Black';
+    src: url('../fonts/Nunito-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url('../fonts/Nunito-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-SemiBold';
+    src: url('../fonts/Nunito-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url('../fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Medium';
+    src: url('../fonts/Nunito-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Bolder';
+    src: url('../fonts/Nunito-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Light';
+    src: url('../fonts/Nunito-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-Lighter';
+    src: url('../fonts/Nunito-ExtraLight.ttf');
+}
+
+
+/* http://www.freefontsdownload.net */
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica.otf');
+}
+
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('../fonts/HelveticaBold.ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeue.ttf');
+}
+
+@font-face {
+    font-family: 'Helvetica-Neue-Bold';
+    src: url('../fonts/HelveticaNeueBd.ttf');
+}
+
+@font-face {
+    font-family: 'Liberation-Sans-Regular';
+    src: url('../fonts/LiberationSans-Regular.ttf');
+}

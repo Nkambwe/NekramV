@@ -1,0 +1,2366 @@
+    /*
+ * Style sheet: Nekram.CSS 1.0 Augs 2018
+ * Created by Nkambwe Mark
+ * www.nekram.co.org
+ * Namespacing: use 'nekram' prefix on special classes and IDs referenced in this file. For example .nekram-user, #nekram-user
+ * Copyright 2018-2019 Mark-Nk
+
+  TOC
+    1.Structure
+       a.fonts
+       b.colors
+       c.typography
+    2.Grid Layout
+      a.mobile devices
+      b.tablet and medium devices
+      c.desktops and large devices
+      e.column push. pull and offsets
+    3.Navigation
+       a.Tabs Navigation
+       b.Pills Navigation
+       c.Navbar
+    4.Controls
+        a.Buttons
+             i.Normal Buttons
+            ii.oval buttons
+           iii.circular buutons
+            iv.Outlined buttons
+             v.split buttons
+            vi.Iconed buttons
+        b.Labels
+        c.Textfields
+        d.Checkboxes
+        e.Option buttons
+        f.Lists
+    5.Style Controls
+      a. Buttons
+      b. Labels 
+      c. TextFields
+      d. Check Control
+      e. Option buttons
+      f. Selection Control      
+    6.fonts
+    7.Images
+    8.Tables
+    9.Modal Dialogs
+ */
+    /*fonts are handled in the nekram.fonts.css*/
+    
+    @import url('nekram.fonts.css');
+    @import url('nekram.colors.css');
+    /*end imports*/
+    /**/
+    /* (1.a)fonts are handled in the nekram.fonts.css*/
+    
+    *,
+    *::after,
+    *::before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    body {
+        color: var(--cl-text-normal);
+        font-family: 'Liberation-Sans-Regular', Helvetica, Arial, sans-serif
+    }
+    
+    p {
+        line-height: 1.4rem;
+        margin-bottom: 1.2em;
+    }
+
+    /**
+    /
+    /******************************************************************************
+     *************************** (1.b) background colors**********************************
+    *******************************************************************************/
+    /***red backgrounds***/
+    
+    .bg-extra-light-red {
+        color: var(--cl-text-normal);
+        background: var(--red-light-extra)
+    }
+    
+    .bg-light-red {
+        color: var(--cl-text-normal);
+        background: var(--red-light)
+    }
+    
+    .bg-slightly-light-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-light-slightly)
+    }
+    
+    .bg-medium-light-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-light-medium)
+    }
+    
+    .bg-strong-light-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-light-strong)
+    }
+    
+    .bg-red {
+        color: var(--cl-text-light-2);
+        background: var(--red)
+    }
+    
+    .bg-slightly-dark-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-dark-slightly)
+    }
+    
+    .bg-dark-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-dark)
+    }
+    
+    .bg-strong-dark-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-dark-strong)
+    }
+    
+    .bg-extra-dark-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-dark-extra)
+    }
+    
+    .bg-accent-light-red {
+        color: var(--cl-text-normal);
+        background: var(--red-light-accent)
+    }
+    
+    .bg-accent-medium-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-medium-accent)
+    }
+    
+    .bg-accent-tarn-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-tarn-accent)
+    }
+    
+    .bg-accent-dark-red {
+        color: var(--cl-text-light-2);
+        background: var(--red-dark-accent)
+    }
+    /**/
+    /***pink backgrounds***/
+    
+    .bg-extra-light-pink {
+        color: var(--cl-text-normal);
+        background: var(--pink-light-extra)
+    }
+    
+    .bg-light-pink {
+        color: var(--cl-text-normal);
+        background: var(--pink-light)
+    }
+    
+    .bg-slightly-light-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-light-slightly)
+    }
+    
+    .bg-medium-light-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-light-medium)
+    }
+    
+    .bg-strong-light-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-light-strong)
+    }
+    
+    .bg-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink)
+    }
+    
+    .bg-slightly-dark-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-dark-slightly)
+    }
+    
+    .bg-dark-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-dark)
+    }
+    
+    .bg-strong-dark-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-dark-strong)
+    }
+    
+    .bg-extra-dark-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-dark-extra)
+    }
+    
+    .bg-accent-light-pink {
+        color: var(--cl-text-normal);
+        background: var(--pink-light-accent)
+    }
+    
+    .bg-accent-medium-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-medium-accent)
+    }
+    
+    .bg-accent-tarn-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-tarn-accent)
+    }
+    
+    .bg-accent-dark-pink {
+        color: var(--cl-text-light-2);
+        background: var(--pink-dark-accent)
+    }
+    /**/
+    /***purple backgrounds***/
+    
+    .bg-extra-light-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-light-extra)
+    }
+    
+    .bg-light-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-light)
+    }
+    
+    .bg-slightly-light-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-light-slightly)
+    }
+    
+    .bg-medium-light-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-light-medium)
+    }
+    
+    .bg-strong-light-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-light-strong)
+    }
+    
+    .bg-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple)
+    }
+    
+    .bg-slightly-dark-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-dark-slightly)
+    }
+    
+    .bg-dark-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-dark)
+    }
+    
+    .bg-strong-dark-purple {
+        background: var(--purple-dark-strong)
+    }
+    
+    .bg-extra-dark-purple {
+        background: var(--purple-dark-extra)
+    }
+    
+    .bg-accent-light-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-light-accent)
+    }
+    
+    .bg-accent-medium-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-medium-accent)
+    }
+    
+    .bg-accent-tarn-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-tarn-accent)
+    }
+    
+    .bg-accent-dark-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-dark-accent)
+    }
+    /**/
+    /***deep purple backgrounds***/
+    
+    .bg-extra-light-deep-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-deep-light-extra)
+    }
+    
+    .bg-light-deep-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-deep-light)
+    }
+    
+    .bg-slightly-light-deep-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-deep-light-slightly)
+    }
+    
+    .bg-medium-light-deep-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-deep-light-medium)
+    }
+    
+    .bg-strong-light-deep-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-deep-light-strong)
+    }
+    
+    .bg-deep-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-deep)
+    }
+    
+    .bg-slightly-dark-deep-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-deep-dark-slightly)
+    }
+    
+    .bg-dark-deep-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-deep-dark)
+    }
+    
+    .bg-strong-dark-deep-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-deep-dark-strong)
+    }
+    
+    .bg-extra-dark-deep-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-deep-dark-extra)
+    }
+    
+    .bg-accent-light-deep-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-deep-light-accent)
+    }
+    
+    .bg-accent-medium-deep-purple {
+        color: var(--cl-text-normal);
+        background: var(--purple-deep-medium-accent)
+    }
+    
+    .bg-accent-tarn-deep-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-deep-tarn-accent)
+    }
+    
+    .bg-accent-dark-deep-purple {
+        color: var(--cl-text-light-2);
+        background: var(--purple-deep-dark-accent)
+    }
+    /**/
+    /***indigo backgrounds***/
+    
+    .bg-extra-light-indigo {
+        color: var(--cl-text-normal);
+        background: var(--indigo-light-extra)
+    }
+    
+    .bg-light-indigo {
+        color: var(--cl-text-normal);
+        background: var(--indigo-light)
+    }
+    
+    .bg-slightly-light-indigo {
+        color: var(--cl-text-normal);
+        background: var(--indigo-light-slightly)
+    }
+    
+    .bg-medium-light-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-light-medium)
+    }
+    
+    .bg-strong-light-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-light-strong)
+    }
+    
+    .bg-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo)
+    }
+    
+    .bg-slightly-dark-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-dark-slightly)
+    }
+    
+    .bg-dark-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-dark)
+    }
+    
+    .bg-strong-dark-indigo {
+        background: var(--indigo-dark-strong)
+    }
+    
+    .bg-extra-dark-indigo {
+        background: var(--indigo-dark-extra)
+    }
+    
+    .bg-accent-light-indigo {
+        color: var(--cl-text-normal);
+        background: var(--indigo-light-accent)
+    }
+    
+    .bg-accent-medium-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-medium-accent)
+    }
+    
+    .bg-accent-tarn-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-tarn-accent)
+    }
+    
+    .bg-accent-dark-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-dark-accent)
+    }
+    /**/
+    /***blue backgrounds***/
+    
+    .bg-extra-light-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-light-extra)
+    }
+    
+    .bg-light-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-light)
+    }
+    
+    .bg-slightly-light-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-light-slightly)
+    }
+    
+    .bg-medium-light-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-light-medium)
+    }
+    
+    .bg-strong-light-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-light-strong)
+    }
+    
+    .bg-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue)
+    }
+    
+    .bg-slightly-dark-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark-slightly);
+    }
+    
+    .bg-dark-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark)
+    }
+    
+    .bg-strong-dark-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark-strong)
+    }
+    
+    .bg-extra-dark-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark-extra)
+    }
+    
+    .bg-accent-light-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-light-accent)
+    }
+    
+    .bg-accent-medium-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-medium-accent)
+    }
+    
+    .bg-accent-tarn-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-tarn-accent)
+    }
+    
+    .bg-accent-dark-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark-accent)
+    }
+    /**/
+    /***indigo backgrounds***/
+    
+    .bg-extra-light-indigo {
+        color: var(--cl-text-normal);
+        background: var(--indigo-light-extra)
+    }
+    
+    .bg-light-indigo {
+        color: var(--cl-text-normal);
+        background: var(--indigo-light)
+    }
+    
+    .bg-slightly-light-indigo {
+        color: var(--cl-text-normal);
+        background: var(--indigo-light-slightly)
+    }
+    
+    .bg-medium-light-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-light-medium)
+    }
+    
+    .bg-strong-light-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-light-strong)
+    }
+    
+    .bg-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo)
+    }
+    
+    .bg-slightly-dark-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-dark-slightly)
+    }
+    
+    .bg-dark-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-dark)
+    }
+    
+    .bg-strong-dark-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-dark-strong)
+    }
+    
+    .bg-extra-dark-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-dark-extra)
+    }
+    
+    .bg-accent-light-indigo {
+        color: var(--cl-text-normal);
+        background: var(--indigo-light-accent)
+    }
+    
+    .bg-accent-medium-indigo {
+        color: var(--cl-text-normal);
+        background: var(--indigo-medium-accent)
+    }
+    
+    .bg-accent-tarn-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-tarn-accent)
+    }
+    
+    .bg-accent-dark-indigo {
+        color: var(--cl-text-light-2);
+        background: var(--indigo-dark-accent)
+    }
+    /**/
+    /***light blue backgrounds***/
+    
+    .bg-extra-light-light-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-light-light-extra)
+    }
+    
+    .bg-light-light-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-ligh-light)
+    }
+    
+    .bg-slightly-light-light-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-light-light-slightly)
+    }
+    
+    .bg-medium-light-light-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-light-light-medium)
+    }
+    
+    .bg-strong-light-light-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-light-light-strong)
+    }
+    
+    .bg-control-light-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-light-control)
+    }
+    
+    .bg-slightly-dark-light-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark-light-slightly)
+    }
+    
+    .bg-light-light-dark-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark-light-light)
+    }
+    
+    .bg-strong-light-dark-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark-light-strong)
+    }
+    
+    .bg-extra-dark-light-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark-light-extra)
+    }
+    
+    .bg-accent-light-light-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-light-light-accent)
+    }
+    
+    .bg-accent-light-medium-blue {
+        color: var(--cl-text-normal);
+        background: var(--blue-medium-light-accent)
+    }
+    
+    .bg-accent-light-tarn-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-tarn-light-accent)
+    }
+    
+    .bg-accent-dark-light-blue {
+        color: var(--cl-text-light-2);
+        background: var(--blue-dark-light-accent)
+    }
+    /**/
+    /***cyan backgrounds***/
+    
+    .bg-extra-light-cyan {
+        color: var(--cl-text-normal);
+        background: var(--cyan-light-extra)
+    }
+    
+    .bg-light-cyan {
+        color: var(--cl-text-normal);
+        background: var(--cyan-light)
+    }
+    
+    .bg-slightly-light-cyan {
+        color: var(--cl-text-normal);
+        background: var(--cyan-light-slightly)
+    }
+    
+    .bg-medium-light-cyan {
+        color: var(--cl-text-light-2);
+        background: var(--cyan-light-medium)
+    }
+    
+    .bg-strong-light-cyan {
+        color: var(--cl-text-light-2);
+        background: var(--cyan-light-strong)
+    }
+    
+    .bg-cyan {
+        color: var(--cl-text-light-2);
+        background: var(--cyan)
+    }
+    
+    .bg-slightly-dark-cyan {
+        color: var(--cl-text-light-2);
+        background: var(--cyan-dark-slightly)
+    }
+    
+    .bg-dark-cyan {
+        color: var(--cl-text-light-2);
+        background: var(--cyan-dark)
+    }
+    
+    .bg-strong-dark-cyan {
+        color: var(--cl-text-light-2);
+        background: var(--cyan-dark-strong)
+    }
+    
+    .bg-extra-dark-cyan {
+        color: var(--cl-text-light-2);
+        background: var(--cyan-dark-extra)
+    }
+    
+    .bg-accent-light-cyan {
+        color: var(--cl-text-normal);
+        background: var(--cyan-light-accent)
+    }
+    
+    .bg-accent-medium-cyan {
+        color: var(--cl-text-normal);
+        background: var(--cyan-medium-accent)
+    }
+    
+    .bg-accent-tarn-cyan {
+        color: var(--cl-text-light-2);
+        background: var(--cyan-tarn-accent)
+    }
+    
+    .bg-accent-dark-cyan {
+        color: var(--cl-text-light-2);
+        background: var(--cyan-dark-accent)
+    }
+    /**/
+    /***teal backgrounds***/
+    
+    .bg-extra-light-teal {
+        color: var(--cl-text-normal);
+        background: var(--teal-light-extra)
+    }
+    
+    .bg-light-teal {
+        color: var(--cl-text-normal);
+        background: var(--teal-light)
+    }
+    
+    .bg-slightly-light-teal {
+        color: var(--cl-text-normal);
+        background: var(--teal-light-slightly)
+    }
+    
+    .bg-medium-light-teal {
+        color: var(--cl-text-light-2);
+        background: var(--teal-light-medium)
+    }
+    
+    .bg-strong-light-teal {
+        color: var(--cl-text-light-2);
+        background: var(--teal-light-strong)
+    }
+    
+    .bg-teal {
+        color: var(--cl-text-light-2);
+        background: var(--teal)
+    }
+    
+    .bg-slightly-dark-teal {
+        color: var(--cl-text-light-2);
+        background: var(--teal-dark-slightly)
+    }
+    
+    .bg-dark-teal {
+        color: var(--cl-text-light-2);
+        background: var(--teal-dark)
+    }
+    
+    .bg-strong-dark-teal {
+        color: var(--cl-text-light-2);
+        background: var(--teal-dark-strong)
+    }
+    
+    .bg-extra-dark-teal {
+        color: var(--cl-text-light-2);
+        background: var(--teal-dark-extra)
+    }
+    
+    .bg-accent-light-teal {
+        color: var(--cl-text-normal);
+        background: var(--teal-light-accent)
+    }
+    
+    .bg-accent-medium-teal {
+        color: var(--cl-text-normal);
+        background: var(--teal-medium-accent)
+    }
+    
+    .bg-accent-tarn-teal {
+        color: var(--cl-text-light-2);
+        background: var(--teal-tarn-accent)
+    }
+    
+    .bg-accent-dark-teal {
+        color: var(--cl-text-light-2);
+        background: var(--teal-dark-accent)
+    }
+    /**/
+    /***green backgrounds***/
+    
+    .bg-extra-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-light-extra)
+    }
+    
+    .bg-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-light)
+    }
+    
+    .bg-slightly-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-light-slightly)
+    }
+    
+    .bg-medium-light-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-light-medium)
+    }
+    
+    .bg-strong-light-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-light-strong)
+    }
+    
+    .bg-green {
+        color: var(--cl-text-light-2);
+        background: var(--green)
+    }
+    
+    .bg-slightly-dark-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-dark-slightly)
+    }
+    
+    .bg-dark-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-dark)
+    }
+    
+    .bg-strong-dark-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-dark-strong)
+    }
+    
+    .bg-extra-dark-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-dark-extra)
+    }
+    
+    .bg-accent-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-light-accent)
+    }
+    
+    .bg-accent-medium-green {
+        color: var(--cl-text-normal);
+        background: var(--green-medium-accent)
+    }
+    
+    .bg-accent-tarn-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-tarn-accent)
+    }
+    
+    .bg-accent-dark-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-dark-accent)
+    }
+    /**/
+    /***light green backgrounds***/
+    
+    .bg-extra-light-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-light-light-extra)
+    }
+    
+    .bg-light-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-ligh-light)
+    }
+    
+    .bg-slightly-light-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-light-light-slightly)
+    }
+    
+    .bg-medium-light-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-light-light-medium)
+    }
+    
+    .bg-strong-light-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-light-light-strong)
+    }
+    
+    .bg-control-light-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-light-control)
+    }
+    
+    .bg-slightly-dark-light-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-dark-light-slightly)
+    }
+    
+    .bg-light-light-dark-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-dark-light-light)
+    }
+    
+    .bg-strong-light-dark-green {
+        color: var(--cl-text-light-2);
+        background: var(--green-dark-light-strong)
+    }
+    
+    .bg-extra-dark-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-dark-light-extra)
+    }
+    
+    .bg-accent-light-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-light-light-accent)
+    }
+    
+    .bg-accent-light-medium-green {
+        color: var(--cl-text-normal);
+        background: var(--green-medium-light-accent)
+    }
+    
+    .bg-accent-light-tarn-green {
+        color: var(--cl-text-normal);
+        background: var(--green-tarn-light-accent)
+    }
+    
+    .bg-accent-dark-light-green {
+        color: var(--cl-text-normal);
+        background: var(--green-dark-light-accent)
+    }
+    /**/
+    /***lime backgrounds***/
+    
+    .bg-extra-light-lime {
+        color: var(--cl-text-normal);
+        background: var(--lime-light-extra)
+    }
+    
+    .bg-light-lime {
+        color: var(--cl-text-normal);
+        background: var(--lime-light)
+    }
+    
+    .bg-slightly-light-lime {
+        color: var(--cl-text-normal);
+        background: var(--lime-light-slightly)
+    }
+    
+    .bg-medium-light-lime {
+        color: var(--cl-text-normal);
+        background: var(--lime-light-medium)
+    }
+    
+    .bg-strong-light-lime {
+        color: var(--cl-text-normal);
+        background: var(--lime-light-strong)
+    }
+    
+    .bg-lime {
+        color: var(--cl-text-light-2);
+        background: var(--lime)
+    }
+    
+    .bg-slightly-dark-lime {
+        color: var(--cl-text-light-2);
+        background: var(--lime-dark-slightly)
+    }
+    
+    .bg-dark-lime {
+        color: var(--cl-text-light-2);
+        background: var(--lime-dark)
+    }
+    
+    .bg-strong-dark-lime {
+        color: var(--cl-text-light-2);
+        background: var(--lime-dark-strong)
+    }
+    
+    .bg-extra-dark-lime {
+        color: var(--cl-text-light-2);
+        background: var(--lime-dark-extra)
+    }
+    
+    .bg-accent-light-lime {
+        color: var(--cl-text-normal);
+        background: var(--lime-light-accent)
+    }
+    
+    .bg-accent-medium-lime {
+        color: var(--cl-text-normal);
+        background: var(--lime-medium-accent)
+    }
+    
+    .bg-accent-tarn-lime {
+        color: var(--cl-text-normal);
+        background: var(--lime-tarn-accent)
+    }
+    
+    .bg-accent-dark-lime {
+        color: var(--cl-text-normal);
+        background: var(--lime-dark-accent)
+    }
+    /**/
+    /***yellow backgrounds***/
+    
+    .bg-extra-light-yellow {
+        color: var(--cl-text-normal);
+        background: var(--yellow-light-extra);
+    }
+    
+    .bg-light-yellow {
+        color: var(--cl-text-normal);
+        background: var(--yellow-light);
+    }
+    
+    .bg-slightly-light-yellow {
+        color: var(--cl-text-normal);
+        background: var(--yellow-light-slightly)
+    }
+    
+    .bg-medium-light-yellow {
+        color: var(--cl-text-normal);
+        background: var(--yellow-light-medium)
+    }
+    
+    .bg-strong-light-yellow {
+        color: var(--cl-text-dark-1);
+        background: var(--yellow-light-strong)
+    }
+    
+    .bg-yellow {
+        color: var(--cl-text-normal);
+        background: var(--yellow)
+    }
+    
+    .bg-slightly-dark-yellow {
+        color: var(--cl-text-light-2);
+        background: var(--yellow-dark-slightly)
+    }
+    
+    .bg-dark-yellow {
+        color: var(--cl-text-light-2);
+        background: var(--yellow-dark)
+    }
+    
+    .bg-strong-dark-yellow {
+        color: var(--cl-text-light-2);
+        background: var(--yellow-dark-strong)
+    }
+    
+    .bg-extra-dark-yellow {
+        color: var(--cl-text-light-2);
+        background: var(--yellow-dark-extra)
+    }
+    
+    .bg-accent-light-yellow {
+        color: var(--cl-text-normal);
+        background: var(--yellow-light-accent)
+    }
+    
+    .bg-accent-medium-yellow {
+        color: var(--cl-text-normal);
+        background: var(--yellow-medium-accent)
+    }
+    
+    .bg-accent-tarn-yellow {
+        color: var(--cl-text-normal);
+        background: var(--yellow-tarn-accent)
+    }
+    
+    .bg-accent-dark-yellow {
+        color: var(--cl-text-normal);
+        background: var(--yellow-dark-accent)
+    }
+    /**/
+    /***ambers backgrounds***/
+    
+    .bg-extra-light-amber {
+        color: var(--cl-text-normal);
+        background: var(--amber-light-extra)
+    }
+    
+    .bg-light-amber {
+        color: var(--cl-text-normal);
+        background: var(--amber-light)
+    }
+    
+    .bg-slightly-light-amber {
+        color: var(--cl-text-normal);
+        background: var(--amber-light-slightly)
+    }
+    
+    .bg-medium-light-amber {
+        color: var(--cl-text-normal);
+        background: var(--amber-light-medium)
+    }
+    
+    .bg-strong-light-amber {
+        color: var(--cl-text-normal);
+        background: var(--amber-light-strong)
+    }
+    
+    .bg-amber {
+        color: var(--cl-text-normal);
+        background: var(--amber)
+    }
+    
+    .bg-slightly-dark-amber {
+        color: var(--cl-text-light-2);
+        background: var(--amber-dark-slightly)
+    }
+    
+    .bg-dark-amber {
+        color: var(--cl-text-light-2);
+        background: var(--amber-dark)
+    }
+    
+    .bg-strong-dark-amber {
+        color: var(--cl-text-light-2);
+        background: var(--amber-dark-strong)
+    }
+    
+    .bg-extra-dark-amber {
+        color: var(--cl-text-light-2);
+        background: var(--amber-dark-extra)
+    }
+    
+    .bg-accent-light-amber {
+        color: var(--cl-text-normal);
+        background: var(--amber-light-accent)
+    }
+    
+    .bg-accent-medium-amber {
+        color: var(--cl-text-normal);
+        background: var(--amber-medium-accent)
+    }
+    
+    .bg-accent-tarn-amber {
+        color: var(--cl-text-light-2);
+        background: var(--amber-tarn-accent)
+    }
+    
+    .bg-accent-dark-amber {
+        color: var(--cl-text-light-2);
+        background: var(--amber-dark-accent)
+    }
+    /**/
+    /***orange backgrounds***/
+    
+    .bg-extra-light-orange {
+        color: var(--cl-text-normal);
+        background: var(--orange-light-extra)
+    }
+    
+    .bg-light-orange {
+        color: var(--cl-text-normal);
+        background: var(--orange-light)
+    }
+    
+    .bg-slightly-light-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-light-slightly)
+    }
+    
+    .bg-medium-light-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-light-medium)
+    }
+    
+    .bg-strong-light-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-light-strong)
+    }
+    
+    .bg-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange)
+    }
+    
+    .bg-slightly-dark-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-dark-slightly)
+    }
+    
+    .bg-dark-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-dark)
+    }
+    
+    .bg-strong-dark-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-dark-strong)
+    }
+    
+    .bg-extra-dark-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-dark-extra)
+    }
+    
+    .bg-accent-light-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-light-accent)
+    }
+    
+    .bg-accent-medium-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-medium-accent)
+    }
+    
+    .bg-accent-tarn-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-tarn-accent)
+    }
+    
+    .bg-accent-dark-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-dark-accent)
+    }
+    /**/
+    /***deep orange backgrounds***/
+    
+    .bg-extra-light-deep-orange {
+        color: var(--cl-text-normal);
+        background: var(--orange-deep-light-extra)
+    }
+    
+    .bg-light-deep-orange {
+        color: var(--cl-text-normal);
+        background: var(--orange-deep-light)
+    }
+    
+    .bg-slightly-light-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-light-slightly)
+    }
+    
+    .bg-medium-light-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-light-medium)
+    }
+    
+    .bg-strong-light-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-light-strong)
+    }
+    
+    .bg-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep)
+    }
+    
+    .bg-slightly-dark-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-dark-slightly)
+    }
+    
+    .bg-dark-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-dark)
+    }
+    
+    .bg-strong-dark-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-dark-strong)
+    }
+    
+    .bg-extra-dark-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-dark-extra)
+    }
+    
+    .bg-accent-light-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-light-accent)
+    }
+    
+    .bg-accent-medium-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-medium-accent)
+    }
+    
+    .bg-accent-tarn-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-tarn-accent)
+    }
+    
+    .bg-accent-dark-deep-orange {
+        color: var(--cl-text-light-2);
+        background: var(--orange-deep-dark-accent)
+    }
+    /**/
+    /***brown backgrounds***/
+    
+    .bg-extra-light-brown {
+        color: var(--cl-text-normal);
+        background: var(--brown-light-extra)
+    }
+    
+    .bg-light-brown {
+        color: var(--cl-text-normal);
+        background: var(--brown-light)
+    }
+    
+    .bg-slightly-light-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-light-slightly)
+    }
+    
+    .bg-medium-light-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-light-medium)
+    }
+    
+    .bg-strong-light-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-light-strong)
+    }
+    
+    .bg-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown)
+    }
+    
+    .bg-slightly-dark-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-dark-slightly)
+    }
+    
+    .bg-dark-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-dark)
+    }
+    
+    .bg-strong-dark-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-dark-strong)
+    }
+    
+    .bg-extra-dark-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-dark-extra)
+    }
+    
+    .bg-accent-light-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-light-accent)
+    }
+    
+    .bg-accent-medium-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-medium-accent)
+    }
+    
+    .bg-accent-tarn-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-tarn-accent)
+    }
+    
+    .bg-accent-dark-brown {
+        color: var(--cl-text-light-2);
+        background: var(--brown-dark-accent)
+    }
+    /**/
+    /***grey backgrounds***/
+    
+    .bg-white {
+        color: var(--cl-text-normal);
+        background: var(--white);
+    }
+    
+    .bg-extra-light-grey {
+        color: var(--cl-text-normal);
+        background: var(--grey-light-extra);
+    }
+    
+    .bg-light-grey {
+        color: var(--cl-text-normal);
+        background: var(--grey-light)
+    }
+    
+    .bg-slightly-light-grey {
+        color: var(--cl-text-normal);
+        background: var(--grey-light-slightly)
+    }
+    
+    .bg-medium-light-grey {
+        color: var(--cl-text-normal);
+        background: var(--grey-light-medium)
+    }
+    
+    .bg-strong-light-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey-light-strong)
+    }
+    
+    .bg-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey)
+    }
+    
+    .bg-slightly-dark-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey-dark-slightly)
+    }
+    
+    .bg-dark-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey-dark)
+    }
+    
+    .bg-strong-dark-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey-dark-strong)
+    }
+    
+    .bg-extra-dark-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey-dark-extra)
+    }
+    
+    .bg-accent-light-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey-light-accent)
+    }
+    
+    .bg-accent-medium-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey-medium-accent)
+    }
+    
+    .bg-accent-tarn-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey-tarn-accent)
+    }
+    
+    .bg-accent-dark-grey {
+        color: var(--cl-text-light-2);
+        background: var(--grey-dark-accent)
+    }
+    /**/
+    /**************************************end background colors****************************/
+    /**/
+    /**/
+    /***************************************************************************************
+    **************************************text colors***************************************
+    ****************************************************************************************/
+    
+    .normal-text-clr {
+        color: var(--cl-text-normal)
+    }
+    
+    .dark-text-clr {
+        color: var(--cl-text-dark-2)
+    }
+    
+    .light-text-clr {
+        color: var(--cl-text-light)
+    }
+    
+    .light-text-clr-1 {
+        color: var(--cl-text-light-1)
+    }
+    
+    .light-text-clr-2 {
+        color: var(--cl-text-light-2)
+    }
+    
+    .highlite-text-clr {
+        color: var(--cl-text-highlite)
+    }
+    
+    .danger-text-clr {
+        color: var(--cl-text-danger)
+    }
+    
+    .warning-text-clr {
+        color: var(--cl-text-warning)
+    }
+    
+    .success-text-clr {
+        color: var(--cl-text-success)
+    }
+    /**/
+    /***************************************end text colors************************************/
+    /**/
+    /**/
+    /*************************************** (1.c) typography *************************************/
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 7px;
+        margin-top: 7px;
+        font-family: 'Helvetica-Neue-Bold', Helvetica, Arial, sans-serif
+    }
+    
+    /**/
+    /********secondary headings*/
+    
+    h1>small,
+    h2>small,
+    h3>small,
+    h4>small,
+    h5>small,
+    h6>small,
+    h1>.small,
+    h2>.small,
+    h3>.small,
+    h4>.small,
+    h5>.small,
+    h6>.small {
+        font-size: 0.7em;
+        color: var(--cl-text-dark-2)
+    }
+    /**/
+    /********** lead copy*/
+    
+    .lead {
+        padding: 10px;
+        line-height: 22px;
+        font-size: 1.07em;
+        font-weight: bold;
+        color: var(--cl-text-dark-2);
+    }
+    /**/
+    /******** text alignement*/
+    
+    .text-align-left {
+        text-align: left;
+        padding: 2% 7%;
+    }
+    
+    .text-align-center {
+        text-align: center;
+        padding: 2% 7%;
+    }
+    
+    .text-align-justify {
+        text-align: justify;
+        padding: 2% 7%;
+    }
+    
+    .text-align-right {
+        text-align: right;
+        padding: 2% 7%;
+    }
+    /**/
+    /******* block quote**/
+    
+    blockquote {
+        padding: 10px;
+        margin: 10px;
+        font-weight: bold;
+        line-height: 23px;
+        display: block;
+        border-left: solid 1px var(--cl-text-light)
+    }
+    
+    blockquote>small {
+        display: block;
+        padding: 5px;
+        font-size: 0.8em;
+    }
+    
+    .pull-right {
+        text-align: right;
+    }
+    /**/
+    /***************************************end headers************************************/
+    /**/
+    /**/
+    /*************************************** (3) Navigation ************************************/
+    /**/
+    /*nav class*/
+   
+    /*tab-navigation*/
+    .tab-nav {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .tab-header {
+        overflow: auto;
+        background: var(--grey-light-extra);
+        -webkit-overflow-scrolling: touch;
+        -webkit-box-shadow: inset 0 -2px 3px rgba(203, 196, 130, 0.06);
+        box-shadow: inset 0 -2px 3px rgba(203, 196, 130, 0.06);
+        border-bottom:solid 0.3px var(--grey-light-slightly);  
+    }
+
+    .tab-header-item {
+        height: 100%;
+     }
+
+    .page-header{
+        cursor: pointer;
+        color:rgb(214, 207, 207);
+    }
+
+    .page-header:hover { 
+        color:var(--cl-text-normal);
+        background: var(--grey-light-medium)
+    }
+
+    .page-header.selected-page { 
+        color:var(--white);
+        background: var(--grey-light-strong) !important;
+    }
+
+    .page-header.selected-page:hover { 
+        color:var(--cl-text-light-1);
+        background: var(--grey-dark) !important;
+    }
+
+    .tab-content {
+        height: 100%;
+        padding: 10px;
+        margin-top: 55px;
+    }
+
+    .page { 
+        margin: 10px;
+        padding:10px;
+        display: none;
+    }
+
+    .page.selected-page {
+        display: block;
+        -webkit-animation: tab-fade-in 0.5s;
+        animation: tab-fade-in 0.5s;
+     }
+
+    @-webkit-keyframes tab-fade-in {
+
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+    }
+      
+    @keyframes tab-fade-in {
+
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+    }
+
+    .page-header[data-content='page1']::before {
+        background-position: 0 0;
+    }
+
+    .page-header[data-content='page2']::before {
+        background-position: -16px 0;
+    }
+
+    .page-header[data-content='page3']::before {
+        background-position: -32px 0;
+    }
+
+    .page-header[data-content='page4']::before {
+        background-position: -48px 0;
+    }
+
+    .page-header[data-content='page5']::before {
+        background-position: -64px 0;
+    }
+
+    .page-header[data-content='page6']::before {
+        background-position: -80px 0;
+    }
+
+    .page-header[data-content='page7']::before {
+        background-position: -96px 0;
+    }
+
+    .page-header.selected-page[data-content='page1']::before{
+        background-position: 0 -16px;
+    }
+
+    .page-header.selected-page[data-content='page2']::before{
+        background-position: -16px -16px;
+    }
+
+    .page-header.selected-page[data-content='page3']::before{
+        background-position: -32px -16px;
+    }
+
+    .page-header.selected-page[data-content='page4']::before{
+        background-position: -48px -16px;
+    }
+
+    .page-header.selected-page[data-content='page5']::before{
+        background-position: -64px -16px;
+    }
+
+    .page-header.selected-page[data-content='page6']::before{
+        background-position: -80px -16px;
+    }
+
+    .page-header.selected-page[data-content='page7']::before{
+        background-position: -96px -16px;
+    }
+
+    /********************** tab themes *********************/
+    
+    /*********************************************************************Dark theme*/
+    
+    .nav-tab.nav-tab-dark .nav {
+        background: var(--grey-dark-accent)
+    }
+
+    .nav-tab.nav-tab-dark .nav .tab-header .header-item a {
+        color:var(--grey);
+    }
+    
+    .nav-tab.nav-tab-dark .nav .tab-header .header-item a:hover {
+        color: var(--white);
+        border-bottom: solid 2px var(--pink-dark-strong);
+    }
+
+    .nav-tab.nav-tab-dark .nav .tab-header .header-item a.selected-item {
+        /*selected item*/
+        color: var(--white);
+        background: var(--pink-dark-strong);
+    }
+
+    .nav-tab.nav-tab-dark .nav .tab-header .header-item a.selected-item:hover {
+        /*selected item hover*/
+        background: var(--pink-dark-strong);
+        border-bottom: solid 2px var(--amber-dark-accent);
+    }
+
+    .nav-tab.nav-tab-dark .tab-content .page{
+        color:var(--grey);
+        background: var(--grey-tarn-accent);
+    }
+
+    /**/
+    /**/
+    /************************************** (a) Tabs Navigation *********************************/
+    /**/
+    /*************************************** end tab Navigation *********************************/
+    /**/
+    /************************************** (b) Pills Navigation ********************************/
+    /**/
+    /****************************************end pill Navigation ********************************/
+    /**/
+    /************************************** (c) Navbar ******************************************/
+    /**/
+    /****************************************end navbar******************************************/
+    /**/
+    /**/
+    /******************************************************************************************
+    ****************************************layout*********************************************
+    *******************************************************************************************/
+    /**/
+    /**** container and rows*/
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    [class*="col-xs"] {
+        float: left;
+        width: 100%;
+    }
+    /**/
+    /**** media query for extra small devices*/
+    
+    .col-xs-1,
+    .col-xs-2,
+    .col-xs-3,
+    .col-xs-4,
+    .col-xs-5,
+    .col-xs-6,
+    .col-xs-7,
+    .col-xs-8,
+    .col-xs-9,
+    .col-xs-10,
+    .col-xs-11,
+    .col-xs-12 {
+        max-width: auto;
+        transition: width 1s ease-in-out;
+    }
+
+    /*media query for small devices*/
+    @media screen and (max-width: 49.9999em){
+
+        h1 {
+            font-size: 2em;
+            /*font-size: 3em;*/
+        }
+        
+        h2 {
+            font-size: 1.65em;
+            /*font-size: 2.5em;*/
+        }
+        
+        h3 {
+            font-size: 1.35em;
+        }
+        
+        h4 {
+            font-size: 1.15em;
+        }
+        
+        h5 {
+            font-size: 1em;
+        }
+        
+        h6 {
+            font-size: 0.75em;
+        }
+
+        /*tab-navigation*/
+        .tab-header { 
+            position: fixed;
+            bottom:0;
+            left:0;
+            right: 0;
+            border-top: solid 1px var(--cl-text-light); 
+        }
+
+        /*let menu float to the left*/
+        .page-header {
+            float: left;
+            font-size: 0.9em;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .tab-content {
+            position: none;
+            height: 100%;
+            padding: 10px;
+            margin-top: 0;
+            font-size: 0.9em;
+        }
+
+    }
+
+    /**/
+    /**** media query for small devices*/
+    @media screen and (min-width: 50em) and (max-width: 69.999em){
+        [class*="col-sm"] {
+            float: left;
+        }
+        .col-sm-1 {
+            width: 8.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-2 {
+            width: 16.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-3 {
+            width: 25%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-4 {
+            width: 33.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-5 {
+            width: 41.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-6 {
+            width: 50%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-7 {
+            width: 58.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-8 {
+            width: 66.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-9 {
+            width: 75%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-10 {
+            width: 83.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-11 {
+            width: 91.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-sm-12 {
+            width: 100%;
+            transition: width 1s ease-in-out;
+        }
+
+        /*headers*/
+        h1 {
+            font-size: 2em;
+            /*font-size: 3em;*/
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            /*font-size: 2.5em;*/
+        }
+        
+        h3 {
+            font-size: 1.6em;
+        }
+        
+        h4 {
+            font-size: 1.4em;
+        }
+        
+        h5 {
+            font-size: 1.2em;
+        }
+        
+        h6 {
+            font-size: 1em;
+        }
+        
+        /*tab-navigation*/
+        .tab-nav::after {
+            display: none;
+        }
+
+        .tab-header {
+           position: fixed;
+           top:0;
+           left:0;
+           width:150px;
+           height: 100%;
+           -webkit-box-shadow: inset -2px 0 3px rgba(203, 196, 130, 0.06);
+           box-shadow: inset -2px 0 3px rgba(203, 196, 130, 0.06);
+           z-index: 1;
+           border-right:solid 0.3px var(--grey-light-slightly); 
+        }
+
+        .tab-header-item {
+            height: 100%;
+         }
+
+         .page-header {
+            padding: 20px;
+            position: relative;
+            display: block;
+            text-align: center;
+            width: 100%;
+            font-size: 0.95em;
+          }
+
+        .tab-content {
+            height: 100%;
+            padding: 10px;
+            margin-top: 0;
+            font-size: 0.95em;
+            margin-left: 150px;
+        }
+    }
+    /**/
+    /**** columns for medium devices*/
+
+    @media screen and (min-width: 70em) and (max-width: 85.4999em) {
+        [class*="col-md"] {
+            float: left;
+        }
+        .col-md-1 {
+            width: 8.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-2 {
+            width: 16.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-3 {
+            width: 25%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-4 {
+            width: 33.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-5 {
+            width: 41.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-6 {
+            width: 50%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-7 {
+            width: 58.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-8 {
+            width: 66.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-9 {
+            width: 75%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-10 {
+            width: 83.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-11 {
+            width: 91.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-md-12 {
+            width: 100%;
+            transition: width 1s ease-in-out;
+        }
+
+        /*headers*/
+        
+    h1 {
+        font-size: 2.3em;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    
+    h3 {
+        font-size: 1.7em;
+    }
+    
+    h4 {
+        font-size: 1.4em;
+    }
+    
+    h5 {
+        font-size: 1.1em;
+    }
+    
+    h6 {
+        font-size: 0.8em;
+    }
+
+        /*tab-navigation*/
+
+        .tab-header {
+            position: fixed;
+            top:0;
+            width: 100%;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .tab-header-item {
+            width: 100%;
+        }
+
+        .tab-header-item::after {
+            /* clearfix */
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .page-header {
+            float: left;
+            height: 65px;
+            display: block;
+            padding: 20px 10px 10px 10px
+         } 
+    }
+
+    /**/
+    /**** columns for large devices*/
+    
+    @media screen and (min-width: 86em) {
+        [class*="col-lg"] {
+            float: left;
+        }
+        .col-lg-1 {
+            width: 8.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-2 {
+            width: 16.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-3 {
+            width: 25%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-4 {
+            width: 33.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-5 {
+            width: 41.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-6 {
+            width: 50%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-7 {
+            width: 58.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-8 {
+            width: 66.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-9 {
+            width: 75%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-10 {
+            width: 83.33%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-11 {
+            width: 91.66%;
+            transition: width 1s ease-in-out;
+        }
+        .col-lg-12 {
+            width: 100%;
+            transition: width 1s ease-in-out;
+        }
+
+        /*headers*/
+        
+    h1 {
+        font-size: 3em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+    
+    h3 {
+        font-size: 2.15em;
+    }
+    
+    h4 {
+        font-size: 1.75em;
+    }
+    
+    h5 {
+        font-size: 1.45em;
+    }
+    
+    h6 {
+        font-size: 1.15em;
+    }
+
+        /*tab-navigation*/
+
+        .tab-header {
+            position: fixed;
+            top:0;
+            width: 100%;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .tab-header-item {
+            width: 100%;
+        }
+
+        .tab-header-item::after {
+            /* clearfix */
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .page-header {
+            float: left;
+            height: 65px;
+            display: block;
+            padding: 20px 10px 10px 10px
+         } 
+    }
+    /**/
+    /**/
+    /***************************************column offsets******************************************/
+    /**
+     ** Adds margin to the column
+    **/
+    
+    .col-md-offset-1 {
+        margin-left: 8.33%;
+    }
+    
+    .col-md-offset-2 {
+        margin-left: 8.33%;
+    }
+    
+    .col-md-offset-3 {
+        margin-left: 25%;
+    }
+    
+    .col-sm-6.col-md-offset-3 .col-md-6.col-md-offset-3 .col-lg-6.col-md-offset-3 {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    
+    .col-md-offset-4 {
+        margin-left: 33.33%;
+    }
+    
+    .col-md-offset-5 {
+        margin-left: 41.66%;
+    }
+    
+    .col-md-offset-6 {
+        margin-left: 50%;
+    }
+    
+    .col-md-offset-7 {
+        margin-left: 58.33%;
+    }
+    
+    .col-md-offset-8 {
+        margin-left: 66.66%;
+    }
+    
+    .col-md-offset-9 {
+        margin-left: 75%;
+    }
+    
+    .col-md-offset-10 {
+        margin-left: 83.33%;
+    }
+    
+    .col-md-offset-11 {
+        margin-left: 91.66%;
+    }
+    /**/
+    /**/
+    /***************************************column pull******************************************/
+    /**
+     ** Decrement the width of a section by this size
+    **/
+    
+    .col-md-pull-1 {
+        width: 8.33%;
+    }
+    
+    .col-md-pull-2 {
+        width: 8.33%;
+    }
+    
+    .col-md-pull-3 {
+        width: 25%;
+    }
+    
+    .col-md-pull-4 {
+        width: 33.33%;
+    }
+    
+    .col-md-pull-5 {
+        width: 41.66%;
+    }
+    
+    .col-md-pull-6 {
+        width: 50%;
+    }
+    
+    .col-md-pull-7 {
+        width: 58.33%;
+    }
+    
+    .col-md-pull-8 {
+        width: 66.66%;
+    }
+    
+    .col-md-pull-9 {
+        width: 75%;
+    }
+    
+    .col-md-pull-10 {
+        width: 83.33%;
+    }
+    
+    .col-md-pull-11 {
+        width: 91.66%;
+    }
+    /**/
+    /**/
+    /***************************************column push******************************************/
+    /**
+     ** Increment the width of a section by this size
+    **/
+    
+    .col-md-push-1 {
+        width: 8.33%;
+    }
+    
+    .col-md-push-2 {
+        width: 8.33%;
+    }
+    
+    .col-md-push-3 {
+        width: 25%;
+    }
+    
+    .col-md-push-4 {
+        width: 33.33%;
+    }
+    
+    .col-md-push-5 {
+        width: 41.66%;
+    }
+    
+    .col-md-push-6 {
+        width: 50%;
+    }
+    
+    .col-md-push-7 {
+        width: 58.33%;
+    }
+    
+    .col-md-push-8 {
+        width: 66.66%;
+    }
+    
+    .col-md-push-9 {
+        width: 75%;
+    }
+    
+    .col-md-push-10 {
+        width: 83.33%;
+    }
+    
+    .col-md-push-11 {
+        width: 91.66%;
+    }
+    /**/
+    /**/
+    /***************************************end layout******************************************/
