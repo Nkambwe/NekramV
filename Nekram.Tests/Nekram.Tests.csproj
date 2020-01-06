@@ -54,11 +54,37 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ApplicationModuleTests\AppmoduleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nekram.Api\Nekram.Api.csproj">
+      <Project>{dfc035ad-42a0-42dd-bca4-755a8f1eba95}</Project>
+      <Name>Nekram.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nekram.App\Nekram.App.csproj">
+      <Project>{17a2045d-f9fe-4766-847f-530c80cbbcc3}</Project>
+      <Name>Nekram.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nekram.Data\Nekram.Data.csproj">
+      <Project>{d2c00a9d-e2cf-4fef-9a04-76e69148f6f0}</Project>
+      <Name>Nekram.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nekram.Infrastructure\Nekram.Infrastructure.csproj">
+      <Project>{4e40d53f-7099-4094-adb9-07941d6a851e}</Project>
+      <Name>Nekram.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nekram.Models\Nekram.Models.csproj">
+      <Project>{6b0a1706-b3ab-4983-b98c-93d00b5c25f2}</Project>
+      <Name>Nekram.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nekram.Repositories\Nekram.Repositories.csproj">
+      <Project>{b29cad6a-1c19-48b7-b009-16f836ea8152}</Project>
+      <Name>Nekram.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
