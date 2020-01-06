@@ -3,7 +3,55 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nekram.Models", "Nekram.Models\Nekram.Models.csproj", "{6B0A1706-B3AB-4983-B98C-93D00B5C25F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nekram.Infrastructure", "Nekram.Infrastructure\Nekram.Infrastructure.csproj", "{4E40D53F-7099-4094-ADB9-07941D6A851E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nekram.Data", "Nekram.Data\Nekram.Data.csproj", "{D2C00A9D-E2CF-4FEF-9A04-76E69148F6F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nekram.Repositories", "Nekram.Repositories\Nekram.Repositories.csproj", "{B29CAD6A-1C19-48B7-B009-16F836EA8152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nekram.Tests", "Nekram.Tests\Nekram.Tests.csproj", "{E7696235-DF2E-4259-806D-65719EE49023}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nekram.App", "Nekram.App\Nekram.App.csproj", "{17A2045D-F9FE-4766-847F-530C80CBBCC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nekram.Api", "Nekram.Api\Nekram.Api.csproj", "{DFC035AD-42A0-42DD-BCA4-755A8F1EBA95}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B0A1706-B3AB-4983-B98C-93D00B5C25F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0A1706-B3AB-4983-B98C-93D00B5C25F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0A1706-B3AB-4983-B98C-93D00B5C25F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0A1706-B3AB-4983-B98C-93D00B5C25F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E40D53F-7099-4094-ADB9-07941D6A851E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E40D53F-7099-4094-ADB9-07941D6A851E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E40D53F-7099-4094-ADB9-07941D6A851E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E40D53F-7099-4094-ADB9-07941D6A851E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2C00A9D-E2CF-4FEF-9A04-76E69148F6F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2C00A9D-E2CF-4FEF-9A04-76E69148F6F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2C00A9D-E2CF-4FEF-9A04-76E69148F6F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2C00A9D-E2CF-4FEF-9A04-76E69148F6F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29CAD6A-1C19-48B7-B009-16F836EA8152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29CAD6A-1C19-48B7-B009-16F836EA8152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29CAD6A-1C19-48B7-B009-16F836EA8152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29CAD6A-1C19-48B7-B009-16F836EA8152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7696235-DF2E-4259-806D-65719EE49023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7696235-DF2E-4259-806D-65719EE49023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7696235-DF2E-4259-806D-65719EE49023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7696235-DF2E-4259-806D-65719EE49023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A2045D-F9FE-4766-847F-530C80CBBCC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A2045D-F9FE-4766-847F-530C80CBBCC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A2045D-F9FE-4766-847F-530C80CBBCC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A2045D-F9FE-4766-847F-530C80CBBCC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFC035AD-42A0-42DD-BCA4-755A8F1EBA95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC035AD-42A0-42DD-BCA4-755A8F1EBA95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC035AD-42A0-42DD-BCA4-755A8F1EBA95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC035AD-42A0-42DD-BCA4-755A8F1EBA95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
