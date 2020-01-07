@@ -11,34 +11,36 @@
     <link rel="title icon" type="image/png" href="~/Content/images/nvs_logo.png">
 
     <!------------------------- links to styles-->
-    <link rel="stylesheet" type="text/css" href="~/Scripts/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="~/Fonts/css/all.css" />
-    <link id="AppStyle" rel="stylesheet" type="text/css" href="~/Scripts/main.css"/>
-    <link id="AppTheme" rel="stylesheet" type="text/css" href="~/Content/themes/default-Theme.css" />
+    @Styles.Render("~/Content")
+    @Styles.Render("~/Content/themes")
+    @Styles.Render("~/Fonts/css")
 
 </head>
 <body>
     <div class="container-fluid">
-    
+
         @RenderBody()
 
         <footer>
             <p>
-                <img id="codensmalllogo" src="~/Content/images/codens-logo.png" alt="logo"/>
+                <img id="codensmalllogo" src="~/Content/images/codens-logo.png" alt="logo" />
                 &copy;
                 @DateTime.Now.Year. All rights reserved.
             </p>
         </footer>
     </div>
 
-    <script type="text/javascript" src="~/Scripts/jquery-3.4.1.js"></script>
+    @Scripts.Render("~/Scripts")
+    @Scripts.Render("~/Fonts/js")
+    @Scripts.Render("~/Scripts/esm")
+
+    @*<script type="text/javascript" src="~/Scripts/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="~/Scripts/esm/popper.js"></script>
     <script type="text/javascript" src="~/Fonts/js/all.js"></script>
     <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
     <script type="text/javascript" src="~/Scripts/bootstrap.validate.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.validate.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-    <script type="text/javascript" src="~/Scripts/main.js"></script>
+    <script type="text/javascript" src="~/Scripts/main.js"></script>*@
 </body>
 </html>
