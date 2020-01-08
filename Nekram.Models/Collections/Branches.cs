@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using Nekram.Models.Application;
 
 namespace Nekram.Models.Collections {
-    public class Branches: NvCollection<BranchBase> {
+    public class Branches: NvCollection<Branch> {
 
         public Branches() { }
 
-        public Branches(IList<BranchBase> newcollection)
+        public Branches(IList<Branch> newcollection)
             : base(newcollection) { }
 
-        public Branches(NvCollection<BranchBase> newcollection)
+        public Branches(NvCollection<Branch> newcollection)
             : base(newcollection) { }
 
     }

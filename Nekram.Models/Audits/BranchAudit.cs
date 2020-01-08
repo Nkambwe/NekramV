@@ -39,6 +39,7 @@ namespace Nekram.Models.Audits {
         public string Reason { get; set; }
 
         public virtual Branch Parent { get; set; }
+
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {
             if (string.IsNullOrWhiteSpace(OldLegalName))
                 yield return new ValidationResult("Company's legal name is required", new[] { "LegalName" });

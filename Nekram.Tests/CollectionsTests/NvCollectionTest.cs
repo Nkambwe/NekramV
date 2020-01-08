@@ -72,9 +72,9 @@ namespace Nekram.Tests.CollectionsTests {
 
     }
 
-    public class BranchComparer : IComparer<BranchBase> {
+    public class BranchComparer : IComparer<Branch> {
 
-        public int Compare(BranchBase branch, BranchBase otherBranch) {
+        public int Compare(Branch branch, Branch otherBranch) {
             if (branch == null && otherBranch == null ||
                 (branch == null || otherBranch == null))
                 return 0;

@@ -54,7 +54,6 @@
   <ItemGroup>
     <Compile Include="Application\Appconfig.cs" />
     <Compile Include="Application\Branch.cs" />
-    <Compile Include="Application\BranchBase.cs" />
     <Compile Include="Audits\ICreateModifyTracker.cs" />
     <Compile Include="Audits\BranchAudit.cs" />
     <Compile Include="Collections\BranchAudits.cs" />

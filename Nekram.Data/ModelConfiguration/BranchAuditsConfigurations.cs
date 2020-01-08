@@ -11,6 +11,8 @@ namespace Nekram.Data.ModelConfiguration
         /// Initializes a new instance of the BranchAuditsConfigurations class.
         /// </summary>
         public BranchAuditsConfigurations() {
+
+            ToTable("BrAudits");
             Property(a => a.OldLegalName).HasColumnName("olegal").HasMaxLength(80);
             Property(a => a.OldAddress).HasColumnName("oaddress").HasMaxLength(80);
             Property(a => a.OldCity).HasColumnName("ocity").HasMaxLength(20);
