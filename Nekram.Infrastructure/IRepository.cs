@@ -6,12 +6,13 @@
 
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Collections.Generic;
 
-namespace Nekram.Repositories {
+namespace Nekram.Infrastructure {
     // ReSharper disable once InconsistentNaming
+    // ReSharper disable once TypeParameterCanBeVariant
     public interface IRepository<T, K> where T : class {
 
         /// <summary>
