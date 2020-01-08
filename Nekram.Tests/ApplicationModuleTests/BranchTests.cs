@@ -6,13 +6,13 @@ using NUnit.Framework;
 namespace Nekram.Tests.ApplicationModuleTests {
 
     [TestFixture]
-    public class NvOwnerTests {
+    public class BranchTests {
 
-        private NvOwner _owner;
+        private Branch _owner;
 
         [SetUp]
         public void SetUp() {
-            _owner = new NvOwner();
+            _owner = new Branch();
         }
 
         [TestCase(1)]
@@ -25,11 +25,11 @@ namespace Nekram.Tests.ApplicationModuleTests {
         [TestCase(1, 2)]
         public void NvUser_WithSameId_AreEqual_ReturnTrue(int id, int sid) {
             _owner.Id = 1;
-            var anotherowber = new NvOwner {Id = id};
+            var anotherowber = new Branch { Id = id};
             var aresame = _owner == anotherowber;
             var someco = _owner.Equals(anotherowber);
 
-            var sowner = new NvOwner{Id=sid};
+            var sowner = new Branch { Id=sid};
             var arenotsame = _owner != sowner;
             
             Assert.IsTrue(aresame);
