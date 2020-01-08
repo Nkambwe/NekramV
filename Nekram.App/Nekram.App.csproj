@@ -426,6 +426,16 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nekram.Infrastructure\Nekram.Infrastructure.csproj">
+      <Project>{4E40D53F-7099-4094-ADB9-07941D6A851E}</Project>
+      <Name>Nekram.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nekram.Models\Nekram.Models.csproj">
+      <Project>{6B0A1706-B3AB-4983-B98C-93D00B5C25F2}</Project>
+      <Name>Nekram.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

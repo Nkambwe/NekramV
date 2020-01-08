@@ -67,6 +67,10 @@
       <Project>{4E40D53F-7099-4094-ADB9-07941D6A851E}</Project>
       <Name>Nekram.Infrastructure</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Nekram.Models\Nekram.Models.csproj">
+      <Project>{6B0A1706-B3AB-4983-B98C-93D00B5C25F2}</Project>
+      <Name>Nekram.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

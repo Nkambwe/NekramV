@@ -60,7 +60,9 @@
     <Compile Include="Collections\Branches.cs" />
     <Compile Include="Collections\NvCollection.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="IOwned.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryInterfaces\IBranchRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -71,8 +73,6 @@
       <Name>Nekram.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RepositoryInterfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

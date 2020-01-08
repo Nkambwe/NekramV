@@ -4,11 +4,12 @@ using Nekram.Infrastructure;
 
 namespace Nekram.Models.Application {
 
-    public class Appconfig : ValueObject < Appconfig > {
+    public class Appconfig : ValueObject < Appconfig >, IOwned<Branch> {
 
         public string Theme { get; set; }
         public string Version { get; set; }
         public AppType Type { get; set; }
+        public Branch Owner { get; set; }
         public string Modules { get; set; }
         public string ApplicationName { get; set; }
 
@@ -36,5 +37,6 @@ namespace Nekram.Models.Application {
         public override string ToString() {
             return $"{ApplicationName} {Version}";
         }
+
     }
 }

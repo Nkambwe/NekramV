@@ -9,11 +9,18 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.Sql;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Data.Entity.Validation;
+using System.Linq;
+using System.Text;
 using Nekram.Data.ModelConfiguration;
+using Nekram.Infrastructure;
+using Nekram.Models;
 using Nekram.Models.Application;
 using Nekram.Models.Audits;
+using ModelValidationException = Nekram.Infrastructure.ModelValidationException;
 
 namespace Nekram.Data {
 
@@ -44,6 +51,82 @@ namespace Nekram.Data {
         public NvContext(string connectionstring)
             : base(connectionstring) {
             _connectionstring = connectionstring;
+        }
+
+        /// <summary>
+        /// Save changes to the database. Method monitors entities that have changed and also intercepts
+        /// exceptions and wraps them in a new Exception type
+        /// </summary>
+        /// <returns>
+        /// The number of affected rows.
+        /// </returns>
+        public  int SaveChanges<T>() {
+            
+            //manuaaly remove all objects whose parents have been removed
+            var unownedObjs = ChangeTracker.Entries().Where(
+                e => (e.State == EntityState.Modified || e.State == EntityState.Added) &&
+                     e.Entity is IOwned<T> &&
+                     e.Reference("Owner").CurrentValue == null);
+
+            foreach (var unobj in unownedObjs) {
+                unobj.State = EntityState.Deleted;
+            }
+
+            try {
+
+                //automatically track object changes
+                var modified = ChangeTracker.Entries().Where(e => e.State == EntityState.Modified || e.State == EntityState.Added);
+
+                foreach (var item in modified) {
+
+                    var itemchanged = item.Entity as ICreateModifyTracker;
+
+                    if (itemchanged != null) {
+
+                        if (item.State == EntityState.Added) {
+                            itemchanged.Created = DateTime.Now;
+                        }
+
+                        itemchanged.Modified = DateTime.Now;
+
+                        //TODO Check object type and update corresponding audit table
+                    }
+                }
+
+                return base.SaveChanges();
+
+            } catch (DbEntityValidationException entityException) {
+
+                var errors = entityException.EntityValidationErrors;
+                var result = new StringBuilder();
+                var allErrors = new List<ValidationResult>();
+
+                foreach (var error in errors) {
+
+                    foreach (var validationError in error.ValidationErrors) {
+
+                        result.AppendFormat("\r\n  Entity of type {0} has validation error \"{1}\" for property {2}.\r\n", error.Entry.Entity.GetType(), validationError.ErrorMessage, validationError.PropertyName);
+                        var entityobj = error.Entry.Entity as EntityObject<int>;
+
+                        if (entityobj != null) {
+                            result.Append(entityobj.HasNoIdentity() ? "  This entity was added in this session.\r\n" : string.Format("  The Id of the entity is {0}.\r\n", entityobj.Id));
+                        }
+                        allErrors.Add(new ValidationResult(validationError.ErrorMessage, new[] { validationError.PropertyName }));
+                    }
+                }
+
+                throw new ModelValidationException(result.ToString(), entityException, allErrors);
+            }
+        }
+
+        /// <summary>
+        /// Context configurations and settings
+        /// </summary>
+        /// <param name="modelBuilder"></param>
+        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Configurations.Add(new BranchConfigurations());
+            modelBuilder.Configurations.Add(new BranchAuditsConfigurations());
         }
 
         #region Server Management
@@ -250,14 +333,5 @@ namespace Nekram.Data {
 
         #endregion
 
-        /// <summary>
-        /// Context configurations and settings
-        /// </summary>
-        /// <param name="modelBuilder"></param>
-        protected override void OnModelCreating(DbModelBuilder modelBuilder) {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            modelBuilder.Configurations.Add(new BranchConfigurations());
-            modelBuilder.Configurations.Add(new BranchAuditsConfigurations());
-        }
     }
 }
