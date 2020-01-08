@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DropCreateWhenChanged.cs" />
+    <Compile Include="ModelConfiguration\AppConfiguration.cs" />
     <Compile Include="ModelConfiguration\BranchAuditsConfigurations.cs" />
     <Compile Include="ModelConfiguration\BranchConfigurations.cs" />
     <Compile Include="NvContext.cs" />

@@ -22,7 +22,6 @@ namespace Nekram.Data.ModelConfiguration {
             Property(c => c.Mobil).HasMaxLength(25);
             Property(c => c.Country).HasMaxLength(80);
             HasMany(c => c.Branches);
-
         }
     }
 }

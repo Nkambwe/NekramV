@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Nekram.Models;
+using NUnit.Framework;
 using Nekram.Models.Application;
 
 namespace Nekram.Tests.ApplicationModuleTests {
@@ -8,15 +9,13 @@ namespace Nekram.Tests.ApplicationModuleTests {
 
         [SetUp]
         public void Setup() {
-            _config = new Appconfig();
+            _config = new Appconfig("","","",AppType.None);
         }
 
-        [TestCase("","","")]
-        public void NewConfig_IsNull_ReturnsTrue(string module, string version, string name) {
-            _config.ApplicationName = name;
-            _config.Modules = module;
-            _config.Version = version;
-            Assert.IsTrue(_config.IsNull);
+        [Test]
+        public void NewConfig_IsNull_ReturnsTrue() {
+            var result = _config.IsNull;
+            Assert.IsTrue(result);
         }
 
         [TestCase("Nekram v105")]

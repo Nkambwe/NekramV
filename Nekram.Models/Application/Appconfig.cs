@@ -1,22 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.Serialization;
 using Nekram.Infrastructure;
 
 namespace Nekram.Models.Application {
 
-    public class Appconfig : ValueObject < Appconfig >, IOwned<Branch> {
-
+    public class Appconfig : EntityObject < Appconfig >, IOwned<Branch> {
+        public string ApplicationName { get; set; }
         public string Theme { get; set; }
         public string Version { get; set; }
         public AppType Type { get; set; }
-
-        [IgnoreDataMember]
-        public Branch Owner { get; set; }
-
         public string Modules { get; set; }
-
-        public string ApplicationName { get; set; }
 
         // ReSharper disable once UnusedMember.Local
         private Appconfig() { }
@@ -36,8 +29,7 @@ namespace Nekram.Models.Application {
                         string.IsNullOrEmpty(Version));
             }
         }
-
-        public virtual Branch Company { get; set; }
+        public virtual Branch Owner { get; set; }
 
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {
             if (string.IsNullOrWhiteSpace(Version))

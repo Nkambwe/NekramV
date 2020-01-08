@@ -127,6 +127,7 @@ namespace Nekram.Data {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Configurations.Add(new BranchConfigurations());
             modelBuilder.Configurations.Add(new BranchAuditsConfigurations());
+            modelBuilder.Configurations.Add(new AppConfiguration());
         }
 
         #region Server Management

@@ -33,8 +33,7 @@ namespace Nekram.Models.Application {
 
         public virtual Branches Branches { get; set; }
         public virtual BranchAudits Audits { get; set; }
-
-       // public virtual Appconfig Configurations { get; set; }
+        public virtual Appconfig Configurations { get; set; }
 
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {
             if (string.IsNullOrWhiteSpace(LegalName))
