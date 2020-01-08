@@ -4,7 +4,7 @@ using Nekram.Infrastructure;
 
 namespace Nekram.Models.Application {
 
-    public class Appconfig : EntityObject < Appconfig >, IOwned<Branch> {
+    public class Appconfig : EntityObject < int >, IOwned<Branch> {
         public string ApplicationName { get; set; }
         public string Theme { get; set; }
         public string Version { get; set; }
@@ -29,7 +29,9 @@ namespace Nekram.Models.Application {
                         string.IsNullOrEmpty(Version));
             }
         }
+
         public virtual Branch Owner { get; set; }
+        public int BranchId { get; set; }
 
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {
             if (string.IsNullOrWhiteSpace(Version))

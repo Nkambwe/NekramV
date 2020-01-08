@@ -7,7 +7,7 @@ using Nekram.Models.Collections;
 
 namespace Nekram.Models.Application {
 
-    public class Branch : EntityObject<int>, ICreateModifyTracker, IOwned<Branch> {
+    public class Branch : EntityObject<int>, ICreateModifyTracker{
         public int? ParentId { get; set; }
         public bool IsParent { get; set; }
         public string LegalName { get; set; }
@@ -24,7 +24,6 @@ namespace Nekram.Models.Application {
         public bool IsMain { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
-        public Branch Owner { get; set; }
         public Branch() {
         
             Branches = new Branches();
@@ -33,7 +32,8 @@ namespace Nekram.Models.Application {
 
         public virtual Branches Branches { get; set; }
         public virtual BranchAudits Audits { get; set; }
-        public virtual Appconfig Configurations { get; set; }
+
+        public virtual List<Appconfig> Configurations { get; set; }
 
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {
             if (string.IsNullOrWhiteSpace(LegalName))

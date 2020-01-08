@@ -33,6 +33,7 @@ namespace Nekram.Data {
         /// </summary>
         public DbSet<Branch> Branches { get; set; }
         public DbSet<BranchAudit> Audits { get; set; }
+        public DbSet<Appconfig> Appconfigfiles { get; set; }
 
         /// <summary>
         /// Default constructor

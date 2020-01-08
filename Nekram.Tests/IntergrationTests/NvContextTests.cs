@@ -40,7 +40,7 @@ namespace Nekram.Tests.IntergrationTests {
             };
 
             _context.Branches.Add(company);
-            _context.SaveChanges();
+            _context.SaveChanges<Branch>();
         }
 
         [Test]
@@ -71,7 +71,7 @@ namespace Nekram.Tests.IntergrationTests {
                 parent.Branches.Add(company);
 
                 _context.Branches.Add(company);
-                _context.SaveChanges();
+                _context.SaveChanges<Branch>();
             }
             
             var result = _context.Branches.Single(b => b.Alias.Equals("Beta"));

@@ -11,7 +11,6 @@ namespace Nekram.Data.ModelConfiguration {
         /// </summary>
         public BranchConfigurations() {
             ToTable("Branch");
-            Ignore(c => c.Owner);
             Property(c => c.ParentId).IsOptional();
             Property(c => c.LegalName).IsRequired().HasMaxLength(80);
             Property(c => c.Address).IsRequired().HasMaxLength(80);
@@ -22,6 +21,8 @@ namespace Nekram.Data.ModelConfiguration {
             Property(c => c.Mobil).HasMaxLength(25);
             Property(c => c.Country).HasMaxLength(80);
             HasMany(c => c.Branches);
+            HasMany(c => c.Configurations).WithRequired(a => a.Owner).HasForeignKey(a => a.BranchId);
+
         }
     }
 }
