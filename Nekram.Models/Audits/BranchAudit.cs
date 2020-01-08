@@ -5,7 +5,7 @@ using Nekram.Models.Application;
 
 namespace Nekram.Models.Audits {
 
-    public class NvOwnerAudit {
+    public class BranchAudit {
 
         public string LegalName { get; set; }
         public string Alias { get; set; }

@@ -79,6 +79,7 @@
     <Compile Include="ApplicationModuleTests\AppconfirepoTests.cs" />
     <Compile Include="ApplicationModuleTests\AppmoduleTests.cs" />
     <Compile Include="ApplicationModuleTests\NvOwnerTests.cs" />
+    <Compile Include="CollectionsTests\NvCollectionTest.cs" />
     <Compile Include="ControllersTests\HomeControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

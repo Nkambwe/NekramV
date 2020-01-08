@@ -53,9 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\Appconfig.cs" />
+    <Compile Include="Application\Branch.cs" />
+    <Compile Include="Application\BranchBase.cs" />
     <Compile Include="Application\NvOwner.cs" />
     <Compile Include="Audits\ICreateModifyTracker.cs" />
-    <Compile Include="Audits\NvOwnerAudit.cs" />
+    <Compile Include="Audits\BranchAudit.cs" />
+    <Compile Include="Collections\BranchAudits.cs" />
+    <Compile Include="Collections\Branches.cs" />
+    <Compile Include="Collections\NvCollection.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
