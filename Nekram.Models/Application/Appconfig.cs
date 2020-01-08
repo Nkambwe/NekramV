@@ -20,7 +20,7 @@ namespace Nekram.Models.Application {
             }
         }
 
-        public virtual NvOwner Owner { get; set; }
+        public virtual Branch Company { get; set; }
 
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {
             if (string.IsNullOrWhiteSpace(Version))

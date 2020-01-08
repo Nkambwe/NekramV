@@ -6,7 +6,7 @@ using Nekram.Models.Collections;
 
 namespace Nekram.Models.Application {
     public abstract class BranchBase : EntityObject<int>, ICreateModifyTracker {
-        public BranchBase Parent { get; set; }
+        public int ParentId { get; set; }
         public abstract bool IsParent { get; set; }
         public abstract string LegalName { get; set; }
         public string Alias { get; set; }
@@ -22,8 +22,9 @@ namespace Nekram.Models.Application {
         public bool IsMain { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
-        public Branches Branches { get; set; }
-        public BranchAudits Audits { get; set; }
-       
+        public virtual Branches Branches { get; set; }
+        public virtual BranchAudits Audits { get; set; }
+        public virtual Branch Parent { get; set; }
+
     }
 }

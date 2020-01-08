@@ -1,11 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Nekram.Models.Collections;
 
 namespace Nekram.Models.Application {
 
     public class Branch: BranchBase {
         public override bool IsParent { get; set; }
         public override string LegalName { get; set; }
+        public Branch() {
+        
+            Branches = new Branches();
+            Audits = new BranchAudits();
+        }
+
+        public virtual Appconfig Configurations { get; set; }
 
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {
             if (string.IsNullOrWhiteSpace(LegalName))
