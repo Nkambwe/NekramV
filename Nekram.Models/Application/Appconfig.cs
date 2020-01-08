@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using Nekram.Infrastructure;
 
 namespace Nekram.Models.Application {
@@ -9,9 +10,24 @@ namespace Nekram.Models.Application {
         public string Theme { get; set; }
         public string Version { get; set; }
         public AppType Type { get; set; }
+
+        [IgnoreDataMember]
         public Branch Owner { get; set; }
+
         public string Modules { get; set; }
+
         public string ApplicationName { get; set; }
+
+        // ReSharper disable once UnusedMember.Local
+        private Appconfig() { }
+
+        public Appconfig(string appname, string version, string modules, AppType type, string theme ="") {
+            ApplicationName = appname;
+            Version = version;
+            Modules = modules;
+            Type = type;
+            Theme = theme;
+        }
 
         public bool IsNull {
             get {
@@ -32,6 +48,10 @@ namespace Nekram.Models.Application {
 
             if (string.IsNullOrWhiteSpace(ApplicationName))
                 yield return new ValidationResult("Critical Error: Unknown application name.", new[] { "ApplicationName" });
+
+            if (Type == AppType.None) {
+                yield return new ValidationResult("Product type can't be None.", new[] { "Type" });
+            }
         }
 
         public override string ToString() {
