@@ -1,3 +1,7 @@
+using Nekram.Infrastructure;
+using Nekram.Models.RepositoryInterfaces;
+using Nekram.Repositories.Application;
+
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Nekram.App.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Nekram.App.App_Start.NinjectWebCommon), "Stop")]
 
@@ -38,18 +42,18 @@ namespace Nekram.App.App_Start
         /// Creates the kernel that will manage your application.
         /// </summary>
         /// <returns>The created kernel.</returns>
-        private static IKernel CreateKernel()
-        {
+        private static IKernel CreateKernel() {
+
             var kernel = new StandardKernel();
-            try
-            {
+
+            try {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+
                 RegisterServices(kernel);
                 return kernel;
-            }
-            catch
-            {
+
+            } catch {
                 kernel.Dispose();
                 throw;
             }
@@ -59,8 +63,10 @@ namespace Nekram.App.App_Start
         /// Load your modules or register your services here!
         /// </summary>
         /// <param name="kernel">The kernel.</param>
-        private static void RegisterServices(IKernel kernel)
-        {
+        private static void RegisterServices(IKernel kernel) {
+            kernel.Bind<IUnitOfWorkFactory>().To<IUnitOfWorkFactory>().InRequestScope();
+            kernel.Bind<IBranchRepository>().To<BranchRepositories>().InRequestScope();
+            kernel.Bind<IAppconfigRepository>().To<AppconfigRepository>().InRequestScope();
         }        
     }
 }

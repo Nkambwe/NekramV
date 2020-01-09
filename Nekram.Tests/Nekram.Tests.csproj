@@ -87,6 +87,7 @@
     <Compile Include="ApplicationModuleTests\AppmoduleTests.cs" />
     <Compile Include="ApplicationModuleTests\BranchTests.cs" />
     <Compile Include="CollectionsTests\NvCollectionTest.cs" />
+    <Compile Include="ControllersTests\BranchTestRepository.cs" />
     <Compile Include="ControllersTests\HomeControllerTests.cs" />
     <Compile Include="IntergrationTests\NvContextTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

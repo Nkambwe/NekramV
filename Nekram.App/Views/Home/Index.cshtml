@@ -1,7 +1,12 @@
-﻿@model dynamic
+﻿@model  Nekram.Models.Collections.Branches
 
 @{
     ViewBag.Title = "Nekram v105";
 }
 
-<h2 class="display-4">Welcome to Nekram v105</h2>
+<ul>
+    @foreach (var b in Model)
+    {
+        <li>@b.LegalName</li>
+    }
+</ul>

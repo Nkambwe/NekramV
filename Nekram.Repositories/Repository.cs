@@ -42,6 +42,24 @@ namespace Nekram.Repositories {
         /// Returns an IQueryable of all items of type T.
         /// </summary>
         /// <param name="error">Error message in case something goes wrong</param>
+        /// <returns>An IQueryable of the requested type T.</returns>
+        public IQueryable<T> FindAll(out string error) {
+            error = string.Empty;
+            IQueryable<T> t = null;
+            try {
+                var items = ContextFactory.GetDataContext().Set<T>();
+                t = items.AsQueryable();
+            } catch (Exception ex) {
+                error = ex.InnerException?.InnerException?.Message;
+            }
+
+            return t;
+        }
+
+        /// <summary>
+        /// Returns an IQueryable of all items of type T.
+        /// </summary>
+        /// <param name="error">Error message in case something goes wrong</param>
         /// <param name="filter">An expression of additional properties to eager load. For example: m => m.Payments, m => m.Products.</param>
         /// <returns>An IQueryable of the requested type T.</returns>
         public IQueryable<T> FindAll(out string error, params Expression<Func<T, object>>[] filter) {

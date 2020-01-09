@@ -1,7 +1,11 @@
 ﻿
 
+using System.Collections.Generic;
 using System.Linq;
+using System.Web.Mvc;
+using Nekram.App.Controllers;
 using Nekram.Models.Application;
+using Nekram.Tests.ControllersTests;
 using NUnit.Framework;
 
 namespace Nekram.Tests.ApplicationModuleTests {
@@ -83,5 +87,19 @@ namespace Nekram.Tests.ApplicationModuleTests {
             var result = _branch.Validate().Count(x => x.MemberNames.Contains("Telephone"));
             Assert.That(result == 0);
         }
+
+        [Test]
+        public void ListSortsAndPagesCorrectly() {
+            //var controller = new HomeController(new BranchTestRepository());
+            //var result = controller.List(1, "DateOfBirth", "DESC") as ViewResult;
+
+            //// Assert 
+            //IEnumerable<Branch> modelData = ((IEnumerable<Branch>)result.Model).ToList();
+
+            //Assert.That(modelData.Count() == 2);
+            //Assert.That(modelData.First().LegalName.Equals("Senk Associates"));
+            //Assert.That(modelData.Last().LegalName.Equals("Beta IT Consult"));
+        }
+
     }
 }

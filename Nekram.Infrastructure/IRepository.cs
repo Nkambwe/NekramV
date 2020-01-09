@@ -32,6 +32,8 @@ namespace Nekram.Infrastructure {
         /// <returns>The requested item when found, or null otherwise.</returns>
         T FindById(out string error, K id, params Expression<Func<T, object>>[] filter);
 
+        IQueryable<T> FindAll(out string error);
+
         /// <summary>
         /// Returns an IQueryable of all items of type T.
         /// </summary>

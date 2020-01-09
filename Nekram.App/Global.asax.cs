@@ -6,8 +6,7 @@ using System.Web.Routing;
 
 namespace Nekram.App {
     public class MvcApplication : HttpApplication {
-        protected void Application_Start()
-        {
+        protected void Application_Start() {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

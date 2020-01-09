@@ -18,6 +18,13 @@
 </head>
 <body>
     <div class="container-fluid">
+        <div>
+            <ul>
+                <li>@Html.ActionLink("Company", "Index", "Companyhome", new {area= "Branches" }, null)</li>
+                <li>@Html.ActionLink("Users", "Index", "Nusers", new { area = "Systemusers" }, null)</li>
+            </ul>
+
+        </div>
 
         @RenderBody()
 
