@@ -5,6 +5,7 @@ using Nekram.Infrastructure;
 namespace Nekram.Models.Application {
 
     public class Appconfig : EntityObject < int >, IOwned<Branch> {
+
         public string ApplicationName { get; set; }
         public string Theme { get; set; }
         public string Version { get; set; }

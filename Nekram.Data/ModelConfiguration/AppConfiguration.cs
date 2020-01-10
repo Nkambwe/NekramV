@@ -8,6 +8,7 @@ namespace Nekram.Data.ModelConfiguration {
         /// Initializes a new instance of the AppConfiguration class.
         /// </summary>
         public AppConfiguration() {
+
             ToTable("Config");
             Property(a => a.ApplicationName).HasMaxLength(120);
             Property(a => a.Version).HasColumnName("vnum").IsRequired().HasMaxLength(80);

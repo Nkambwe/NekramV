@@ -54,11 +54,26 @@
   <ItemGroup>
     <Compile Include="Application\Appconfig.cs" />
     <Compile Include="Application\Branch.cs" />
+    <Compile Include="Application\GeneralConfig.cs" />
+    <Compile Include="Application\LogActivity.cs" />
+    <Compile Include="Application\LoginStation.cs" />
+    <Compile Include="Application\NvLogAchieve.cs" />
+    <Compile Include="Application\NvUser.cs" />
+    <Compile Include="Application\NvUserLog.cs" />
+    <Compile Include="Application\NvUserPreference.cs" />
+    <Compile Include="Application\NvUserRole.cs" />
+    <Compile Include="Application\NvUserSession.cs" />
+    <Compile Include="Application\Tax.cs" />
     <Compile Include="Audits\ICreateModifyTracker.cs" />
     <Compile Include="Audits\BranchAudit.cs" />
+    <Compile Include="Collections\Appconfigs.cs" />
     <Compile Include="Collections\BranchAudits.cs" />
     <Compile Include="Collections\Branches.cs" />
+    <Compile Include="Collections\GeneralConfigs.cs" />
     <Compile Include="Collections\NvCollection.cs" />
+    <Compile Include="Collections\NvUserRoles.cs" />
+    <Compile Include="Collections\NvUsers.cs" />
+    <Compile Include="Collections\NvUserSessions.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="IOwned.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

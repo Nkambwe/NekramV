@@ -24,15 +24,12 @@ namespace Nekram.Models.Application {
         public bool IsMain { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
-        public Branch() {
-        
-            Branches = new Branches();
-            Audits = new BranchAudits();
-        }
 
-        public virtual Branches Branches { get; set; }
-        public virtual BranchAudits Audits { get; set; }
-
+        public virtual List<NvUser> Users { get; set; }
+        public virtual List<Branches> Branches { get; set; }
+        public virtual List<GeneralConfig> GeneralConfigurations { get; set; }
+        public virtual List<BranchAudit> Audits { get; set; }
+        public virtual List<Tax> Taxes { get; set; }
         public virtual List<Appconfig> Configurations { get; set; }
 
         public override IEnumerable<ValidationResult> Validate(ValidationContext validationContext) {

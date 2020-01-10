@@ -22,7 +22,7 @@ namespace Nekram.Data.ModelConfiguration {
             Property(c => c.Country).HasMaxLength(80);
             HasMany(c => c.Branches);
             HasMany(c => c.Configurations).WithRequired(a => a.Owner).HasForeignKey(a => a.BranchId);
-
+            HasMany(c => c.Users).WithRequired(u => u.Owner).HasForeignKey(u => u.BranchId);
         }
     }
 }
