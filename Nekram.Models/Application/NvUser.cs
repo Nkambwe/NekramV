@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Nekram.Infrastructure;
+using Nekram.Models.Audits;
 
 namespace Nekram.Models.Application {
 

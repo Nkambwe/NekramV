@@ -1,11 +1,10 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Nekram.Infrastructure;
+using Nekram.Models.Application;
 
-namespace Nekram.Models.Application {
+namespace Nekram.Models.Audits {
     public class NvLogAchieve : EntityObject<int>, IOwned<NvUser> {
 
         public int UserId { get; set; }

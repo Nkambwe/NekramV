@@ -55,11 +55,11 @@
     <Compile Include="Application\Appconfig.cs" />
     <Compile Include="Application\Branch.cs" />
     <Compile Include="Application\GeneralConfig.cs" />
-    <Compile Include="Application\LogActivity.cs" />
+    <Compile Include="Audits\LogActivity.cs" />
     <Compile Include="Application\LoginStation.cs" />
-    <Compile Include="Application\NvLogAchieve.cs" />
+    <Compile Include="Audits\NvLogAchieve.cs" />
     <Compile Include="Application\NvUser.cs" />
-    <Compile Include="Application\NvUserLog.cs" />
+    <Compile Include="Audits\NvUserLog.cs" />
     <Compile Include="Application\NvUserPreference.cs" />
     <Compile Include="Application\NvUserRole.cs" />
     <Compile Include="Application\NvUserSession.cs" />

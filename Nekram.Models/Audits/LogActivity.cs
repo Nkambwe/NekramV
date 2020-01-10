@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Nekram.Infrastructure;
 
-namespace Nekram.Models.Application {
+namespace Nekram.Models.Audits {
     public class LogActivity: EntityObject<int> {
         public string ActivityName { get; set; }
         public bool ShouldLog { get; set; }
