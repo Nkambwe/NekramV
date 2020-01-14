@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Nekram.Infrastructure;
 using Nekram.Models.Audits;
-using Nekram.Models.Collections;
 
 namespace Nekram.Models.Application {
 
@@ -26,7 +25,7 @@ namespace Nekram.Models.Application {
         public DateTime Modified { get; set; }
 
         public virtual List<NvUser> Users { get; set; }
-        public virtual List<Branches> Branches { get; set; }
+        public virtual List<Branch> Branches { get; set; }
         public virtual List<GeneralConfig> GeneralConfigurations { get; set; }
         public virtual List<BranchAudit> Audits { get; set; }
         public virtual List<Tax> Taxes { get; set; }

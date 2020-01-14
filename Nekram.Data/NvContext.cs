@@ -33,6 +33,8 @@ namespace Nekram.Data {
         /// </summary>
         public DbSet<Branch> Branches { get; set; }
         public DbSet<BranchAudit> Audits { get; set; }
+        public DbSet<NvUser> Users { get; set; }
+        public DbSet<NvUserPreference> UserPreferences { get; set; }
         public DbSet<Appconfig> Appconfigfiles { get; set; }
 
         /// <summary>
@@ -129,6 +131,8 @@ namespace Nekram.Data {
             modelBuilder.Configurations.Add(new BranchConfigurations());
             modelBuilder.Configurations.Add(new BranchAuditsConfigurations());
             modelBuilder.Configurations.Add(new AppConfiguration());
+            modelBuilder.Configurations.Add(new UsersConfiguration());
+            modelBuilder.Configurations.Add(new UserPrefConfiguration());
         }
 
         #region Server Management

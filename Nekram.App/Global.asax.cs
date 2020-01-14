@@ -3,6 +3,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using AutoMapper;
 
 namespace Nekram.App {
     public class MvcApplication : HttpApplication {
@@ -11,7 +12,13 @@ namespace Nekram.App {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            AutoMapper.Mapper.Initialize(cfg => cfg.AddProfile<AutoMapProfile>());
+            InitializeAutoMapper();
+        }
+
+        public static void InitializeAutoMapper() {
+            Mapper.Initialize(m =>
+                m.AddProfile<AutoMapProfile>()
+            );
         }
     }
 }

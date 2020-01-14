@@ -305,6 +305,7 @@
     <Content Include="Areas\Systemusers\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Systemusers\Views\Nusers\Index.cshtml" />
     <Content Include="Areas\Branches\Views\Companyhome\Index.cshtml" />
+    <Content Include="Areas\Branches\Views\Companyhome\Create.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
     <Content Include="Scripts\inputmask\inputmask.js" />

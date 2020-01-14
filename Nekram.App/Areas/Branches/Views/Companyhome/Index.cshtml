@@ -1,7 +1,26 @@
 ﻿
+@model  Nekram.Models.Collections.Branches
+
 @{
-    ViewBag.Title = "Company";
+    ViewBag.Title = "Company Branches";
+    Layout = "~/Areas/Branches/Views/Shared/_Layout.cshtml";
 }
 
-<h2 class="display-1">Company home page</h2>
+<div class="row">
+    <div class="col-12">
+        <span id="lblparent">Senk Associates</span>
+        @Html.ActionLink("New Branch", "Create", "Companyhome", new { area = "Branches" }, new { @class = "btn btn-primary text-light font-weight-bold px-3" })
+    </div>
+
+    <div class="col-12">
+        <ul>
+            @foreach (var b in Model) {
+                <li>@b.LegalName</li>
+            }
+        </ul>
+    </div>
+</div>
+
+
+
 

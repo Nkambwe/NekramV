@@ -3,7 +3,7 @@ using Nekram.App.Areas.Branches.ViewModels;
 using Nekram.Models.Application;
 
 namespace Nekram.App {
-    public class AutoMapProfile : Profile {
+    public class AutoMapProfile :Profile {
 
         public AutoMapProfile() {
 
@@ -13,10 +13,12 @@ namespace Nekram.App {
                 .ForMember(b => b.Created, t => t.Ignore())
                 .ForMember(b => b.Modified, t => t.Ignore())
                 .ForMember(b => b.Id, m => m.MapFrom(s => s.Id));
+            CreateMap<BranchViewModel, Branch>();
 
             CreateMap<Appconfig, AppconfigViewModel>()
                 .ForMember(a => a.BranchId, t => t.Ignore())
                 .ForMember(a => a.Id, m => m.MapFrom(s => s.Id));
+            CreateMap<AppconfigViewModel, Appconfig>();
 
             #endregion
 
@@ -24,7 +26,6 @@ namespace Nekram.App {
 
             #endregion
 
-            Mapper.AssertConfigurationIsValid();
         }
     }
 }

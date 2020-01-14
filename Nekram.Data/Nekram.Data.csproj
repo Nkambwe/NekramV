@@ -55,6 +55,8 @@
     <Compile Include="ModelConfiguration\AppConfiguration.cs" />
     <Compile Include="ModelConfiguration\BranchAuditsConfigurations.cs" />
     <Compile Include="ModelConfiguration\BranchConfigurations.cs" />
+    <Compile Include="ModelConfiguration\UserPrefConfiguration.cs" />
+    <Compile Include="ModelConfiguration\UsersConfiguration.cs" />
     <Compile Include="NvContext.cs" />
     <Compile Include="NvContextInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

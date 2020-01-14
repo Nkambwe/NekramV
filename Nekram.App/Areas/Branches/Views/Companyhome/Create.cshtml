@@ -1,0 +1,180 @@
+﻿@model Nekram.App.Areas.Branches.ViewModels.BranchViewModel
+
+@{
+    ViewBag.Title = "Add Branch";
+    Layout = "~/Areas/Branches/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row" style="background-color: rgb(235, 238, 240); height: 90vh;">
+    <div class="col-lg-6">
+        <div>This is side display</div>
+    </div>
+
+    @*Content container>*@
+    <div class="col-lg-6">
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+
+            <div class="row m-0">
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.LegalName, "Registered Name", new { @class = "col-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.LegalName, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.LegalName, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Alias, "Short Name (*If different from Legal Name)", new { @class = "col-md-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.Alias, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.Alias, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0">
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Address, "Physical Address", new { @class = "col-md-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.Address, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.City, new { @class = "col-md-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.City, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0">
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PostalAddress, "Mail Address", new { @class = "col-md-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.PostalAddress, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.PostalAddress, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, new { @class = "col-md-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.Email, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0">
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Mobil, "Fax / Mobile", new { @class = "col-md-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.Mobil, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.Mobil, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Telephone, new { @class = "col-md-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.Telephone, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row m-0">
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Logo, new { @class = "col-md-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.Logo, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.Logo, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Website, new { @class = "col-md-12 p-0 control-label" })
+                            @Html.EditorFor(model => model.Website, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.Website, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0">
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Country, new { @class = "col-md-12 control-label" })
+                            @Html.EditorFor(model => model.Country, new { @class = "form-control col-12" })
+                            @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger col-12" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group custom-control custom-switch pt-3">
+                            <div class="col-6"></div>
+                            <div class="col-6">
+                                @Html.CheckBoxFor(model => model.IsMain, new { @class = "m-0 p-0  custom-control-input" })
+                                @Html.LabelFor(model => model.IsMain,"Main Branch", new {@class = "col-md-10 custom-control-label control-label", id="idmain" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.IsMain, "", new {@class = "text-danger col-12"})
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-0">
+                <div class="col-md-6 m-0"></div>
+                <div class="col-md-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group custom-control custom-switch">
+                            @Html.CheckBoxFor(model => model.IsParent, new {@class = "m-0 p-0 custom-control-input"})
+                            @Html.LabelFor(model => model.IsParent, "Parent Company", new {@class = "col-md-10 custom-control-label control-label", id = "idparent" })
+                            @Html.ValidationMessageFor(model => model.IsParent, "", new {@class = "text-danger"})
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group p-3">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-primary px-3" />
+                    @Html.ActionLink("Cancel", "Index", "Companyhome", new { area = "Branches" }, new { @class = "btn btn-danger px-3 ml-2" })
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+
+
