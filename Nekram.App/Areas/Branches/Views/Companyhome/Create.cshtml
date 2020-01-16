@@ -5,18 +5,28 @@
     Layout = "~/Areas/Branches/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row" style="background-color: rgb(235, 238, 240); height: 90vh;">
-    <div class="col-lg-6">
-        <div>This is side display</div>
+<div class="row create-comp-container">
+    <div class="col-lg-6 text-container">
+        <h2 class="notes-main-header">Setup your company to get started</h2>
+
+        <h5 class="notes-header">Company name</h5>
+        <p class="notes">This includes the company registered name and the
+            short name for your company if different form the registered name.
+            Registered name appears on your documents and the short name may
+            appear on the document footers.</p>
+
+        <h5 class="notes-header">Contanct Details</h5>
+        <p class="notes">Contact details include your physical address, mail address and contact numbers.
+            Your customers use this information to contact you.</p>
     </div>
 
     @*Content container>*@
-    <div class="col-lg-6">
+    <div class="col-lg-6 form-container">
         @using (Html.BeginForm()) {
             @Html.AntiForgeryToken()
 
             <div class="row m-0">
-                <div class="col-md-6 m-0">
+                <div class="col-md-6 col-lg-12 col-xl-6 m-0">
                     <div class="row m-0">
                         <div class="form-group">
                             @Html.LabelFor(model => model.LegalName, "Registered Name", new { @class = "col-12 p-0 control-label" })
@@ -26,7 +36,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 m-0">
+                <div class="col-md-6 col-lg-12 col-xl-6 m-0">
                     <div class="row m-0">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Alias, "Short Name (*If different from Legal Name)", new { @class = "col-md-12 p-0 control-label" })
@@ -38,7 +48,7 @@
             </div>
 
             <div class="row m-0">
-                <div class="col-md-6 m-0">
+                <div class="col-md-6 col-lg-9 col-xl-6 m-0">
                     <div class="row m-0">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Address, "Physical Address", new { @class = "col-md-12 p-0 control-label" })
@@ -48,7 +58,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 m-0">
+                <div class="col-md-6 col-lg-3 col-xl-6 m-0">
                     <div class="row m-0">
                         <div class="form-group">
                             @Html.LabelFor(model => model.City, new { @class = "col-md-12 p-0 control-label" })
@@ -60,7 +70,7 @@
             </div>
 
             <div class="row m-0">
-                <div class="col-md-6 m-0">
+                <div class="col-md-6 col-lg-8 col-xl-6 m-0">
                     <div class="row m-0">
                         <div class="form-group">
                             @Html.LabelFor(model => model.PostalAddress, "Mail Address", new { @class = "col-md-12 p-0 control-label" })
@@ -70,7 +80,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 m-0">
+                <div class="col-md-6 col-lg-4 col-xl-6 m-0">
                     <div class="row m-0">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Email, new { @class = "col-md-12 p-0 control-label" })
@@ -82,7 +92,7 @@
             </div>
 
             <div class="row m-0">
-                <div class="col-md-6 m-0">
+                <div class="col-md-6 col-lg-6 col-xl-6 m-0">
                     <div class="row m-0">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Mobil, "Fax / Mobile", new { @class = "col-md-12 p-0 control-label" })
@@ -92,7 +102,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 m-0">
+                <div class="col-md-6 col-lg-6 col-xl-6 m-0">
                     <div class="row m-0">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Telephone, new { @class = "col-md-12 p-0 control-label" })
@@ -103,10 +113,31 @@
                 </div>
             </div>
 
+            <div class="row m-0">
+                
+                <div class="col-md-6 col-lg-4 col-xl-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Country, new {@class = "col-md-12 p-0 control-label"})
+                            @Html.EditorFor(model => model.Country, new {@class = "form-control col-12"})
+                            @Html.ValidationMessageFor(model => model.Country, "", new {@class = "text-danger col-12"})
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-6 col-lg-8 col-xl-6 m-0">
+                    <div class="row m-0">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Website, new {@class = "col-md-12 p-0 control-label"})
+                            @Html.EditorFor(model => model.Website, new {@class = "form-control col-12"})
+                            @Html.ValidationMessageFor(model => model.Website, "", new {@class = "text-danger col-12"})
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row m-0">
-                <div class="col-md-6 m-0">
+                <div class="col-md-6 col-lg-12 col-xl-6 m-0">
                     <div class="row m-0">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Logo, new { @class = "col-md-12 p-0 control-label" })
@@ -116,47 +147,26 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 m-0">
-                    <div class="row m-0">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Website, new { @class = "col-md-12 p-0 control-label" })
-                            @Html.EditorFor(model => model.Website, new { @class = "form-control col-12" })
-                            @Html.ValidationMessageFor(model => model.Website, "", new { @class = "text-danger col-12" })
-                        </div>
-                    </div>
+                <div class="col-md-6 col-lg-12 col-xl-6 m-0">
                 </div>
             </div>
 
             <div class="row m-0">
-                <div class="col-md-6 m-0">
-                    <div class="row m-0">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Country, new { @class = "col-md-12 control-label" })
-                            @Html.EditorFor(model => model.Country, new { @class = "form-control col-12" })
-                            @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger col-12" })
-                        </div>
-                    </div>
-                </div>
-
                 <div class="col-md-6 m-0">
                     <div class="row m-0">
                         <div class="form-group custom-control custom-switch pt-3">
-                            <div class="col-6"></div>
-                            <div class="col-6">
+                            <div class="col-4"></div>
+                            <div class="col-8">
                                 @Html.CheckBoxFor(model => model.IsMain, new { @class = "m-0 p-0  custom-control-input" })
-                                @Html.LabelFor(model => model.IsMain,"Main Branch", new {@class = "col-md-10 custom-control-label control-label", id="idmain" })
+                                @Html.LabelFor(model => model.IsMain, "Main Branch", new { @class = "col-md-10 custom-control-label control-label", id = "idmain" })
                             </div>
-                            @Html.ValidationMessageFor(model => model.IsMain, "", new {@class = "text-danger col-12"})
+                            @Html.ValidationMessageFor(model => model.IsMain, "", new { @class = "text-danger col-12" })
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row m-0">
-                <div class="col-md-6 m-0"></div>
                 <div class="col-md-6 m-0">
                     <div class="row m-0">
-                        <div class="form-group custom-control custom-switch">
+                        <div class="form-group custom-control custom-switch pt-3">
                             @Html.CheckBoxFor(model => model.IsParent, new {@class = "m-0 p-0 custom-control-input"})
                             @Html.LabelFor(model => model.IsParent, "Parent Company", new {@class = "col-md-10 custom-control-label control-label", id = "idparent" })
                             @Html.ValidationMessageFor(model => model.IsParent, "", new {@class = "text-danger"})

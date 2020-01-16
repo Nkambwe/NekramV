@@ -3,32 +3,80 @@
     padding: 0;
 }
 
+.container-fluid {
+     padding-right: 0!important; 
+     padding-left: 0!important; 
+}
+
 select,
 textarea,
 input[type="text"] {
     width: 100%;
-    max-width: 90%;
 }
 
 .form-group {
     width: 100% !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
     margin: 0 !important;
 }
 
+.form-container,
+.text-container {
+    padding: 5px !important;
+}
+
+.form-container {
+    width: 90%;
+    padding-top: 50px!important;
+    margin: -60px auto 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.text-container {
+    height: 110%;
+}
+
+.notes,
+.notes-header,
+.notes-main-header {
+    padding-left: 20px;
+    transition: font-size .8s;
+    color: rgb(255, 255, 255) !important;
+}
+
+.notes-main-header {
+    font-size: 1.35rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+.notes-header {
+    font-size: 1.2rem;
+}
+
+.notes {
+    font-size: 1.0rem;
+    text-align: justify;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
 .control-label {
-    padding-top: 2px;
+    padding-top: 5px!important;
     font-size: 1.05rem;
-    color:rgb(120,120,120)
+    color: rgb(120,120,120);
 }
 
 #idmain.custom-control-label::before {
     margin-left: 20px;
+    margin-top: 6px;
 }
 
 #idmain.custom-control-label::after {
     margin-left: 20px;
+    margin-top: 6px;
 }
 
 #idparent.custom-control-label {
@@ -37,13 +85,91 @@ input[type="text"] {
 
 #idparent.custom-control-label::before {
     margin-left: 35px;
+    margin-top: 6px;
 }
 
 #idparent.custom-control-label::after {
     margin-left: 35px;
+    margin-top: 6px;
 }
 
 .btn {
-    min-width: 120px;
+    min-width: 40% !important;
+    width: 42%;
 }
 
+.create-comp-container {
+    height: 60vh;
+    margin: 0;
+    background-color: rgb(0, 13, 87);
+}
+
+/*----------------------------- Small devices (landscape phones, 576px and up)*/ 
+ @media (min-width: 576px) {
+     .notes-main-header {
+         font-size: 1.9rem;
+     }
+
+     .form-container {
+         width: 90%;
+         padding-top: 30px!important;
+         margin: -65px auto 0 auto;
+     }
+   
+     .create-comp-container {
+         height: 55vh;
+     }
+
+ }
+
+/*----------------------------- Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+    .notes-main-header {
+        font-size: 1.9rem;
+    }
+
+    .notes {
+        padding-right: 78px;
+    }
+
+}
+
+/*----------------------------- Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+    .create-comp-container {
+        height: 100vh;
+    }
+
+    .text-container {
+        height: 100vh;
+        position: relative;
+    }
+
+    .notes-main-header {
+        font-size: 1.92rem;
+
+    }
+    .notes {
+        padding-right: 40px;
+    }
+
+    .form-container {
+        padding-top: 0!important;
+        margin: 0 auto;
+    }
+}
+
+/*----------------------------- Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+    .notes-main-header {
+        font-size: 2.5rem;
+    }
+
+    .create-comp-container {
+        height: 99%;
+        width: 99%;
+    }
+}
