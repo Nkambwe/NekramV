@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title</title>
@@ -20,12 +25,13 @@
     <div class="container-fluid">
         <div>
             <ul>
-                <li>@Html.ActionLink("Company", "Index", "Companyhome", new {area= "Branches" }, null)</li>
+                <li>@Html.ActionLink("Company", "Index", "Companyhome", new { area = "Branches" }, null)</li>
                 <li>@Html.ActionLink("Users", "Index", "Nusers", new { area = "Systemusers" }, null)</li>
             </ul>
 
         </div>
 
+        <div class="pageloader"></div>
         @RenderBody()
 
         <footer>

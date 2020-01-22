@@ -4,8 +4,8 @@
 }
 
 .container-fluid {
-     padding-right: 0!important; 
-     padding-left: 0!important; 
+    padding-right: 0!important; 
+    padding-left: 0!important; 
 }
 
 select,
@@ -19,157 +19,258 @@ input[type="text"] {
     margin: 0 !important;
 }
 
-.form-container,
-.text-container {
-    padding: 5px !important;
+.pageloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../../Content/images/loader48.gif') 50% 50% no-repeat rgb(24,187,249);
 }
 
-.form-container {
-    width: 90%;
-    padding-top: 50px!important;
-    margin: -60px auto 0 auto;
+/*--------------------------------------- setup pages*/
+
+.intro-main-container,
+.intro-main-container .row,
+.intro-main-container .row .col-12 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.intro-main-container {
+    height: 100vh;
+    background-color: rgb(36, 51, 67) !important;
+}
+
+.intro-nv-logo {
+    width: 40px;
+    height: 40px;
+    transition: all 0.8s;
+    margin-bottom: 15px !important;
+}
+
+.intro-header,
+.intro-mini-text {
+    font-weight: 300;
+    text-align: center !important;
+    transition: all 0.8s;
+}
+
+.intro-header {
+    font-weight: 600;
+    font-size: 1.9rem;
+    line-height: 1.2;
+    color: rgb(40, 167, 69) !important;
+}
+
+.intro-mini-text {
+    font-size: 1.4rem;
+    color: rgb(248, 249, 250) !important;
+}
+
+.intro-slogan-text {
+    color: #f8f9fa !important;
+    font-style: italic !important;
+    font-weight: 300 !important;
+    text-align: center !important;
+}
+
+.title-container {
+    margin-top: -520px !important;
+}
+
+
+.register-link,
+.register-link:active {
+    color: rgb(30, 161, 220);
+    text-decoration: none !important;
+}
+
+.register-link:focus,
+.register-link:hover {
+    color: rgb(30, 161, 240);
+}
+
+.register-link:visited {
+    color: rgb(30, 181, 240);
+}
+
+a.font-weight-normal.text-center.register-link:hover {
+    color: rgb(10,190,248);
+}
+
+.btn-resized {
+    Width: 180px;
+    font-size: 1rem;
+    max-width: 300px !important;
+}
+
+.inner-control-container {
+    border: solid 1px rgb(225, 225, 225);
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
 }
 
-.text-container {
-    height: 110%;
+.inner-control-container .form-control {
+    line-height: 0.5;
+    padding: 0 10px!important;
+    border: none!important;
+    font-size: 0.8rem;
+    border-radius: 0 0 5px 5px!important;
 }
 
-.notes,
-.notes-header,
-.notes-main-header {
-    padding-left: 20px;
-    transition: font-size .8s;
-    color: rgb(255, 255, 255) !important;
+.inner-control-container .form-control:focus {
+    box-shadow: none !important;
 }
 
-.notes-main-header {
-    font-size: 1.35rem;
+.inner-control-container label {
+    font-size: 0.7rem !important;
+    display: inline-block;
+    margin: 0 !important;
+    font-weight: 600;
+    padding: 0 12px !important;
+}
+
+.inner-control-container input:-internal-autofill-selected {
+    background-color: transparent!important;
+    background-image: none !important;
+    color: -internal-light-dark-color(black, white) !important;
+}
+
+.header-span {
+    display: block;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.2;
-    margin-bottom: 20px;
-    padding-top: 30px;
-}
-
-.notes-header {
-    font-size: 1.2rem;
-}
-
-.notes {
-    font-size: 1.0rem;
-    text-align: justify;
-    padding-right: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-}
-
-.control-label {
-    padding-top: 5px!important;
-    font-size: 1.05rem;
-    color: rgb(120,120,120);
-}
-
-#idmain.custom-control-label::before {
-    margin-left: 20px;
-    margin-top: 6px;
-}
-
-#idmain.custom-control-label::after {
-    margin-left: 20px;
-    margin-top: 6px;
-}
-
-#idparent.custom-control-label {
-    padding-left: 30px!important;
-}
-
-#idparent.custom-control-label::before {
-    margin-left: 35px;
-    margin-top: 6px;
-}
-
-#idparent.custom-control-label::after {
-    margin-left: 35px;
-    margin-top: 6px;
-}
-
-.btn {
-    min-width: 40% !important;
-    width: 42%;
-}
-
-.create-comp-container {
-    height: 60vh;
+    text-align: center;
+    padding: 0;
     margin: 0;
-    background-color: rgb(0, 13, 87);
+    color: rgb(255, 255, 255);
+    transition: all 0.5s;
 }
 
-/*----------------------------- Small devices (landscape phones, 576px and up)*/ 
- @media (min-width: 576px) {
-     .notes-main-header {
-         font-size: 1.9rem;
-     }
+/*--------------------------------------- end setup pages*/
 
-     .form-container {
-         width: 90%;
-         padding-top: 30px!important;
-         margin: -65px auto 0 auto;
-     }
-   
-     .create-comp-container {
-         height: 55vh;
-     }
-
- }
-
-/*----------------------------- Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-
-    .notes-main-header {
+/*--------------------------------------- Small devices (landscape phones, 576px and up)*/ 
+@media (min-width: 576px) {
+    
+    .intro-header {
         font-size: 1.9rem;
+        line-height: 1.2;
     }
 
-    .notes {
-        padding-right: 78px;
+    .intro-nv-logo {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 20px !important;
     }
 
-}
-
-/*----------------------------- Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-
-    .create-comp-container {
-        height: 100vh;
+    .intro-mini-text {
+        font-size: 1.9rem;
+        line-height: 1.2;
     }
 
-    .text-container {
-        height: 100vh;
-        position: relative;
+    .header-span {
+        font-size: 2rem;
     }
 
-    .notes-main-header {
-        font-size: 1.92rem;
-
-    }
-    .notes {
-        padding-right: 40px;
-    }
-
-    .form-container {
-        padding-top: 0!important;
-        margin: 0 auto;
+    .pageloader {
+        background: url('../../Content/images/loader68.gif') 50% 50% no-repeat rgb(24,187,249);
     }
 }
 
-/*----------------------------- Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
+/*--------------------------------------- end small devices*/
 
-    .notes-main-header {
+/*--------------------------------------- Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    p.intro-header {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    img.intro-nv-logo {
+        width: 40px !important;
+        height: 40px !important;
+        margin-bottom: 18px !important;
+    }
+
+    p.intro-mini-text {
+        font-size: 2.5rem !important;
+    }
+    p.intro-slogan-text {
+        font-size: 1rem !important;
+    }
+
+    .header-span {
         font-size: 2.5rem;
     }
 
-    .create-comp-container {
-        height: 99%;
-        width: 99%;
+    .pageloader {
+        background: url('../../Content/images/loader128.gif') 50% 50% no-repeat rgb(24,187,249);
     }
 }
+
+/*--------------------------------------- end medium devices*/
+
+/*--------------------------------------- Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+    p.intro-header {
+        font-size: 2.6rem !important;
+        line-height: 1.2 !important;
+    }
+
+    img.intro-nv-logo {
+        width: 50px !important;
+        height: 50px !important;
+        margin-bottom: 20px !important;
+    }
+
+    p.intro-mini-text {
+        font-size: 2.5rem !important;
+    }
+
+    p.intro-slogan-text {
+        font-size: 1.3rem !important;
+    }
+
+    .header-span {
+        font-size: 2.5rem;
+    }
+
+    .pageloader {
+        background: url('../../Content/images/loader150.gif') 50% 50% no-repeat rgb(24,187,249);
+    }
+}
+/*--------------------------------------- end large devices*/
+
+/*--------------------------------------- Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+    p.intro-header {
+        font-size: 3rem !important;
+        line-height: 1.2 !important;
+    }
+
+    img.intro-nv-logo {
+        width: 60px!important;
+        height: 60px!important;
+        margin-bottom: 28px!important;
+    }
+
+    p.intro-mini-text {
+        font-size: 3rem !important;
+    }
+
+    .pageloader {
+        background: url('../../Content/images/loader256.gif') 50% 50% no-repeat rgb(24,187,249);
+    }
+
+}
+/*--------------------------------------- end extra large devices*/
+
+/*--------------------------------------- animations*/
+
+/*--------------------------------------- end animations*/
+

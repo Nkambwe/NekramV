@@ -1,0 +1,83 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "Nekram v202s - Setup";
+    ViewBag.Email = string.Empty;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!------------------------- icon-->
+    <link rel="title icon" type="image/png" href="~/Content/images/nvs_logo.png">
+
+    <!------------------------- links to styles-->
+    @Styles.Render("~/Content")
+    @Styles.Render("~/Content/themes")
+    @Styles.Render("~/Fonts/css")
+    
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row  intro-main-container justify-content-center align-items-center">
+            
+            <p class="col-sm-12 col-md-12 col-lg-12 col-xl-12 intro-header">
+                <img class="intro-nv-logo" src="../../Content/Images/nvm_logo.png" alt="logo"/>
+                Nekram v202s
+            </p>
+
+            <div class="title-container">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <p class="intro-mini-text">Enterprise Management System</p>
+                    <p class="font-italic text-center text-light font-weight-light intro-slogan-text">
+                        reliable, direct and handy
+                    </p>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 m-0">
+                    <div class="row m-0">
+                        <div class="offset-md-4 col-12 m-0">
+                            @using (Html.BeginForm("CompanyInfo", "Setup", FormMethod.Post))
+                            {
+                                <div class="row">
+                                    <div class="col-8">
+                                        @Html.TextBox("companymail", $"{@ViewBag.Email}", new { @class = "form-control", required = "required", PlaceHolder= "Enter Email address"})
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="submit" value="Get Started" class="btn btn-warning text-light" />
+                                    </div>
+                                </div>
+                                
+                                
+                            }
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-4">
+                    <div class="row justify-content-center align-items-center">
+                        @Html.ActionLink("Try Nekram v105A for 30 days free. No payment required and no worries.", "CompanyInfo", "Setup", new { area = "" },
+                            new { @class = "font-weight-normal text-center register-link" })
+                    </div>               
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    @Scripts.Render("~/Scripts")
+    @Scripts.Render("~/Fonts/js")
+    @Scripts.Render("~/Scripts/esm")
+
+</body>
+</html>

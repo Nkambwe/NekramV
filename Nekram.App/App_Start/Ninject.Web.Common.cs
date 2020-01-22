@@ -11,7 +11,7 @@ namespace Nekram.App.App_Start
     using System.Web;
 
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
+    using Nekram.Repositories;
     using Ninject;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
@@ -64,7 +64,7 @@ namespace Nekram.App.App_Start
         /// </summary>
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel) {
-            kernel.Bind<IUnitOfWorkFactory>().To<IUnitOfWorkFactory>().InRequestScope();
+            kernel.Bind<IUnitOfWorkFactory>().To<UnitOfWorkFactory>().InRequestScope();
             kernel.Bind<IBranchRepository>().To<BranchRepositories>().InRequestScope();
             kernel.Bind<IAppconfigRepository>().To<AppconfigRepository>().InRequestScope();
         }        

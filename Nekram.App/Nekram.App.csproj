@@ -152,6 +152,13 @@
     <Content Include="Content\images\codenxl-logo-l.png" />
     <Content Include="Content\images\codenxl-logo.png" />
     <Content Include="Content\images\company-logo.png" />
+    <Content Include="Content\images\loader128.gif" />
+    <Content Include="Content\images\loader150.gif" />
+    <Content Include="Content\images\loader256.gif" />
+    <Content Include="Content\images\loader48.gif" />
+    <Content Include="Content\images\loader512.gif" />
+    <Content Include="Content\images\loader64.gif" />
+    <Content Include="Content\images\loader96.gif" />
     <Content Include="Content\images\nvl_logo.png" />
     <Content Include="Content\images\nvl_logo_l.png" />
     <Content Include="Content\images\nvm_logo.png" />
@@ -162,7 +169,6 @@
     <Content Include="Content\images\nvxl_logo_l.png" />
     <Content Include="Content\images\sign.png" />
     <Content Include="Content\main.css" />
-    <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -414,6 +420,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppConstants.cs" />
     <Compile Include="App_Start\AutoMapProfile.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\Ninject.Web.Common.cs" />
@@ -422,14 +429,20 @@
     <Compile Include="Areas\Branches\ViewModels\AppconfigViewModel.cs" />
     <Compile Include="Areas\Branches\ViewModels\BranchViewModel.cs" />
     <Compile Include="Areas\Systemusers\Controllers\NusersController.cs" />
+    <Content Include="Content\Site.css" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Areas\Branches\BranchesAreaRegistration.cs" />
     <Compile Include="Areas\Systemusers\SystemusersAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\Enums.cs" />
+    <Compile Include="Helpers\SessionManager.cs" />
+    <Compile Include="Helpers\StateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\SetupViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -439,6 +452,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Setup\Setup.cshtml" />
+    <Content Include="Views\Setup\Complete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -450,6 +465,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Branches\Models\" />
     <Folder Include="Areas\Systemusers\Models\" />
+    <Folder Include="Content\Logos\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
